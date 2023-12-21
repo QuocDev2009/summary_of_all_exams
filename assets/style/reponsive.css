@@ -1,0 +1,30 @@
+/* pc */
+@media (min-width: 1024px){
+
+}
+/* tablet */
+@media (min-width: 740px) and (max-width: 1023px){
+
+}
+/* mobile */
+@media (max-width: 739px){
+    .header__heading{
+        font-size: 24px;
+    }
+    .header__desc.isRequired{
+        display: none;
+    }
+    .header__list-items .header__list-items-text{
+        display: none;
+    }
+    .header__list-items-icon{
+        display: inline-block;
+    }
+    .exam-items__desc{
+        font-size: 18px;
+    }
+    .modal-img .modal__closeBtn,
+    .modal-img .modal__download{
+        font-size: 13px;
+    }
+}

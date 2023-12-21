@@ -1,0 +1,30 @@
+.heading{
+    text-align: center;
+}
+.content__order{
+    font-size: 28px;
+}
+.content__section-name{
+    display: inline-block;
+}
+.content__list{
+    margin: 20px 30px 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.content__items{
+    margin-bottom: 20px;
+    width: 800px;
+    max-width: calc(100% - 32px);
+}
+.content__img{
+    width: 100%;
+    transition: all .2s ease;
+}
+.content__img:hover{
+    cursor: pointer;
+    opacity: 0.8;
+    transform: translateY(-5px);
+}

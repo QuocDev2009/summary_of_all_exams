@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đề cương các môn</title>
+    <link rel="stylesheet" href="./assets/style/style.css">
+    <link rel="stylesheet" href="./assets/style/base.css">
+    <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./assets/style/reponsive.css">
+    <link rel="icon" href="./assets/img/web_icon.jpg">
+</head>
+<body>
+    <div class="main">
+        <!-- Header -->
+        <div class="header">
+            <div class="grid">
+                <h1 class="header__heading">Đề cương ôn tập</h1>
+                <h2 class="header__desc isRequired">Đây là tổng hợp các đề cương ôn tập</h2>
+                <div class="header__bot">
+                    <ul class="header__list">
+                        <li class="header__list-items" onclick="showModal('.modal','button.modal__closeBtn', '.modal__heading', '.modal__content','Thông tin về tác giả', [
+                            'Tên tác giả: Thủy Ngọc Quốc',
+                            'Sinh ngày: 12/9/2009',
+                            'Hiện tại đang là học sinh lớp 9/3 tại trường THCS Huỳnh Thúc Kháng',
+                            'Thường trú: Xã Bình Phục, Huyện Thăng Bình, Tỉnh Quảng Nam',
+                            'Là 1 người rất đam mê công việc lập trình và tôi đã quyết định tạo web này'
+                    ])">
+                            <span class="header__list-items-text">
+                                Thông tin tác giả
+                            </span>
+                            <i class="header__list-items-icon ti-user"></i>
+                        </li>
+                        <li class="header__list-items" onclick="showModal('.modal','button.modal__closeBtn', '.modal__heading', '.modal__content','Web của tôi có gì?', [
+                        'Nó có những đề cương ôn tập từ nhiều nguồn gửi về',
+                        'Có những bộ đề thực tế qua các kì thi trước đó',
+                        'Có bộ máy chấm trắc nhiệm tự động cùng với đó là kết quả của các bài tự luận'
+                ])">
+                            <span class="header__list-items-text">
+                                Web của tôi có gì?
+                            </span>
+                            <i class="header__list-items-icon ti-info"></i>
+                        </li>
+                    </ul>
+                    <ul class="header__list">
+                        
+                        <li class="header__list-items" onclick="showModal('.modal','button.modal__closeBtn', '.modal__heading', '.modal__content','Thông tin về lộ trình luyện tập', [
+                        'Sắp tới tầm 1 đến 2 tuần nx sẽ là cuộc thi cuối học kì 1',
+                        'Để giúp mọi người có công cụ hỗ trợ ôn tập hiệu quả tôi đã quyết định tạo ra trang web này'
+                ])">
+                            <span class="header__list-items-text">
+                                Lí do tạo web
+                            </span>
+                            <i class="header__list-items-icon ti-world"></i>
+                        </li>
+                        <li class="header__list-items">
+                            <a href="../index.html" class="header__list-items-text">
+                                Trang chủ
+                            </a>
+                            <a href="../index.html">
+                                <i class="header__list-items-icon ti-home"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="grid">
+                <div class="exams">
+                    <ul class="exam-list">
+                        <li class="exam-items"> 
+                            <a href="./outline/biology.html" class="exam-items__link">
+                                <img src="./assets/img/biology_icon.jpg" alt="" class="exam-items__img">
+                                <span class="exam-items__desc">Môn Sinh Học</span>
+                            </a>
+                        </li>
+                        <li class="exam-items">
+                            <a href="./outline.html" class="exam-items__link">
+                                <img src="./assets/img/chemistry_icon.jpg" alt="" class="exam-items__img">
+                                <span class="exam-items__desc">Môn hóa học</span>
+                            </a>
+                        </li>
+                        <li class="exam-items">
+                            <a href="./outline.html" class="exam-items__link">
+                                <img src="./assets/img/english_icon.jpg" alt="" class="exam-items__img">
+                                <span class="exam-items__desc">Môn Tiếng Anh</span>
+                            </a>
+                        </li>
+                        <li class="exam-items">
+                            <a href="./outline.html" class="exam-items__link">
+                                <img src="./assets/img/literature_icon.jpg" alt="" class="exam-items__img">
+                                <span class="exam-items__desc">Môn ngữ văn</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal">
+        <div class="modal__container">
+            <div class="modal__heading"></div>
+            <div class="modal__content">
+            </div>
+            <div class="modal__bottom">
+                <button class="modal__closeBtn">Đã hiểu</button>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/script/modal.js"></script>
+</body>
+</html>

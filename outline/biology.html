@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đề cương ôn tập môn sinh học</title>
+    <link rel="stylesheet" href="../assets/style/style.css">
+    <link rel="stylesheet" href="../assets/style/base.css">
+    <link rel="stylesheet" href="../assets/fonts/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="../assets/style/exam.css">
+    <link rel="stylesheet" href="../assets/style/reponsive.css">
+    <link rel="icon" href="../assets/img/web_icon.jpg">
+</head>
+<body>
+    <div class="main">
+        <!-- Header -->
+        <div class="header">
+            <div class="grid">
+                <h1 class="header__heading">Đề cương ôn tập</h1>
+                <h2 class="header__desc isRequired">Đây là tổng hợp các đề cương ôn tập</h2>
+                <div class="header__bot">
+                    <ul class="header__list">
+                        <li class="header__list-items" onclick="showModal('.modal','button.modal__closeBtn', '.modal__heading', '.modal__content','Thông tin về tác giả', [
+                            'Tên tác giả: Thủy Ngọc Quốc',
+                            'Sinh ngày: 12/9/2009',
+                            'Hiện tại đang là học sinh lớp 9/3 tại trường THCS Huỳnh Thúc Kháng',
+                            'Thường trú: Xã Bình Phục, Huyện Thăng Bình, Tỉnh Quảng Nam',
+                            'Là 1 người rất đam mê công việc lập trình và tôi đã quyết định tạo web này'
+                    ])">
+                            <span class="header__list-items-text">
+                                Thông tin tác giả
+                            </span>
+                            <i class="header__list-items-icon ti-user"></i>
+                        </li>
+                        <li class="header__list-items" onclick="showModal('.modal','button.modal__closeBtn', '.modal__heading', '.modal__content','Web của tôi có gì?', [
+                        'Nó có những đề cương ôn tập từ nhiều nguồn gửi về',
+                        'Có những bộ đề thực tế qua các kì thi trước đó',
+                        'Có bộ máy chấm trắc nhiệm tự động cùng với đó là kết quả của các bài tự luận'
+                ])">
+                            <span class="header__list-items-text">
+                                Web của tôi có gì?
+                            </span>
+                            <i class="header__list-items-icon ti-info"></i>
+                        </li>
+                    </ul>
+                    <ul class="header__list">
+                        
+                        <li class="header__list-items" onclick="showModal('.modal','button.modal__closeBtn', '.modal__heading', '.modal__content','Thông tin về lộ trình luyện tập', [
+                        'Sắp tới tầm 1 đến 2 tuần nx sẽ là cuộc thi cuối học kì 1',
+                        'Để giúp mọi người có công cụ hỗ trợ ôn tập hiệu quả tôi đã quyết định tạo ra trang web này'
+                ])">
+                            <span class="header__list-items-text">
+                                Lí do tạo web
+                            </span>
+                            <i class="header__list-items-icon ti-world"></i>
+                        </li>
+                        <li class="header__list-items">
+                            <a href="../index.html" class="header__list-items-text">
+                                Trang chủ
+                            </a>
+                            <a href="../index.html">
+                                <i class="header__list-items-icon ti-home"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="grid">
+                <h1 class="heading">Đề cương ôn tập môn sinh học cuối kì 1 lớp 9</h1>
+                <div class="content">
+                    <div class="content__indexing">
+                        <b class="content__order">I / </b>
+                        <h2 class="content__section-name">Phần lý thuyết</h2>
+                    </div>
+                    <ul class="content__list">
+                        <li class="content__items">
+                            <img src="./img/biology/368105684_316073371254320_8238691693305176053_n.jpg" alt="" class="content__img">
+                        </li>
+                        <li class="content__items">
+                            <img src="./img/biology/384568292_380115104398934_8317949032625167033_n.jpg" alt="" class="content__img">
+                        </li>
+                        <li class="content__items">
+                            <img src="./img/biology/385526214_865906628356391_4332401112201366268_n.jpg" alt="" class="content__img">
+                        </li>
+                        <li class="content__items">
+                            <img src="./img/biology/385559163_322722313959555_4548776559828871276_n.jpg" alt="" class="content__img">
+                        </li>
+                        <li class="content__items">
+                            <img src="./img/biology/406833073_2096574537388242_2557498003336535464_n.jpg" alt="" class="content__img">
+                        </li>
+                        <li class="content__items">
+                            <img src="./img/biology/406888433_2207757292912476_8730224167891902361_n.jpg" alt="" class="content__img">
+                        </li>
+                        <li class="content__items">
+                            <img src="./img/biology/406888433_2207757292912476_8730224167891902361_n.jpg" alt="" class="content__img">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal">
+        <div class="modal__container modal__text">
+            <div class="modal__heading"></div>
+            <div class="modal__content">
+            </div>
+            <div class="modal__bottom">
+                <button class="modal__closeBtn">Đã hiểu</button>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal modal-img">
+        <div class="modal__container">
+            <img src="" alt="" class="modal__img">
+            <button class="modal__closeBtn">Đã hiểu</button>
+            <a class="modal__download">
+                <span class="modal__download--text">Tải xuống</span>
+                <i class="modal__download--icon ti-import"></i>
+            </a>
+        </div>
+    </div>
+    <script src="../assets/script/modal.js"></script>
+    <script>
+        showImg('.content__img', '.modal.modal-img','.modal__img', '.modal-img .modal__closeBtn', '.modal-img .modal__download')
+    </script>
+</body>
+</html>
