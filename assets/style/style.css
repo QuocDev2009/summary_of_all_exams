@@ -57,6 +57,9 @@ html{
     margin-top: var(--header-max-height);
     padding-top: 16px;
 }
+.heading{
+    margin-bottom: 16px;
+}
 .exams{
     display: flex;
     flex-direction: column;

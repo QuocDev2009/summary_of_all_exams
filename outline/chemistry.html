@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đề cương ôn tập môn hóa học</title>
+    <link rel="stylesheet" href="../assets/style/style.css">
+    <link rel="stylesheet" href="../assets/style/base.css">
+    <link rel="stylesheet" href="../assets/fonts/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="../assets/style/exam.css">
+    <link rel="stylesheet" href="../assets/style/reponsive.css">
+    <link rel="icon" href="../assets/img/web_icon.jpg">
+</head>
+<body>
+    <div class="main">
+        <div class="header">
+            <div class="grid">
+                <h1 class="header__heading">Đề cương ôn tập môn hóa học</h1>
+                <h2 class="header__desc isRequired">Đây là đề cương ôn tập môn hóa học</h2>
+                <div class="header__bot">
+                    <ul class="header__list">
+                        <li class="header__list-items" onclick="showModal('.modal','button.modal__closeBtn', '.modal__heading', '.modal__content','Thông tin về tác giả', [
+                            'Tên tác giả: Thủy Ngọc Quốc',
+                            'Sinh ngày: 12/9/2009',
+                            'Hiện tại đang là học sinh lớp 9/3 tại trường THCS Huỳnh Thúc Kháng',
+                            'Thường trú: Xã Bình Phục, Huyện Thăng Bình, Tỉnh Quảng Nam',
+                            'Là 1 người rất đam mê công việc lập trình và tôi đã quyết định tạo web này'
+                    ])">
+                            <span class="header__list-items-text">
+                                Thông tin tác giả
+                            </span>
+                            <i class="header__list-items-icon ti-user"></i>
+                        </li>
+                        <li class="header__list-items" onclick="showModal('.modal','button.modal__closeBtn', '.modal__heading', '.modal__content','Web của tôi có gì?', [
+                        'Nó có những đề cương ôn tập từ nhiều nguồn gửi về',
+                        'Có những bộ đề thực tế qua các kì thi trước đó',
+                        'Có bộ máy chấm trắc nhiệm tự động cùng với đó là kết quả của các bài tự luận'
+                ])">
+                            <span class="header__list-items-text">
+                                Web của tôi có gì?
+                            </span>
+                            <i class="header__list-items-icon ti-info"></i>
+                        </li>
+                    </ul>
+                    <ul class="header__list">
+                        
+                        <li class="header__list-items" onclick="showModal('.modal','button.modal__closeBtn', '.modal__heading', '.modal__content','Thông tin về lộ trình luyện tập', [
+                        'Sắp tới tầm 1 đến 2 tuần nx sẽ là cuộc thi cuối học kì 1',
+                        'Để giúp mọi người có công cụ hỗ trợ ôn tập hiệu quả tôi đã quyết định tạo ra trang web này'
+                ])">
+                            <span class="header__list-items-text">
+                                Lí do tạo web
+                            </span>
+                            <i class="header__list-items-icon ti-world"></i>
+                        </li>
+                        <li class="header__list-items">
+                            <a href="../index.html" class="header__list-items-text">
+                                Trang chủ
+                            </a>
+                            <a href="../index.html">
+                                <i class="header__list-items-icon ti-home"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="grid">
+                <h1 class="heading">NỘI DUNG ÔN TẬP CUỐI KỲ I MÔN HÓA HỌC 9 - NĂM HỌC 2023-2024</h1>
+                <div class="content">
+                    
+                    <div class="content__indexing">
+                        <b class="content__order">I / </b>
+                        <h2 class="content__section-name">Phần bài tập</h2>
+                        <div class="content__indexing">
+                            <b class="content__order">1 / </b>
+                            <h2 class="content__section-name">Phần trắc nhiệm</h2>
+                            <ul class="content__list">
+                                <div class="wrapper">
+                                   
+                                </div>
+                                <button class="content__submit">Nộp bài trắc nhiệm</button>
+                            </ul>
+                        </div>
+                    </div>
+                    <button class="download-doc-btn"><a href="./document/biology.docx" download="">Tải xuống tài liệu</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal">
+        <div class="modal__container modal__text">
+            <div class="modal__heading"></div>
+            <div class="modal__content">
+            </div>
+            <div class="modal__bottom">
+                <button class="modal__closeBtn">Đã hiểu</button>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/script/modal.js"></script>
+    <script src="../assets/script/choice.js"></script>
+    <script>
+        choice_question({
+            form: '.content__list .wrapper',
+            submit_selector : '.content__submit',
+            element_class : 'content__items',
+            question_box : 'content__question',
+            question_index_css : 'content__question-indexing',
+            question_content_css : 'content__question-content',
+            answer_box : 'content__answers-items',
+            answer_index_css: 'content__answers-indexing',
+            answer_content_css : 'content__answers-content',
+            answer_list_css : 'content__answers-list',
+            success_css : 'content__answer--success',
+            error_css : 'content__answer--error',
+            question_list : [
+                {
+                    index : 'Câu 1: ',
+                    question_content : 'Chất nào sau đây là oxit bazơ?',
+                    answer_list : [
+                        ' BaO.',
+                        ' P2O5.',
+                        ' SO2.',
+                        ' CO2.'
+                    ],
+                    answer : ' BaO.'
+                },
+                {
+                    index : 'Câu 2: ',
+                    question_content : 'Chất nào sau đây có tính axit?',
+                    answer_list : [
+                        'Mg(OH)2.',
+                        ' NO.',
+                        ' Cl2.',
+                        ' HNO3.'
+                    ],
+                    answer : ' HNO3.'
+                },
+                {
+                    index : 'Câu 3: ',
+                    question_content : 'Dung dịch BaCl2  phản ứng được với chất nào trong các chất sau?',
+                    answer_list : [
+                        ' NaNO3.',
+                        ' KOH.',
+                        ' Na2SO4.',
+                        ' CuO.'
+                    ],
+                    answer : ' Na2SO4.'
+                },
+                {
+                    index : 'Câu 4: ',
+                    question_content : 'Chất nào trong số các chất sau bị nhiệt phân hủy?',
+                    answer_list : [
+                        ' H2SO4.',
+                        ' Al(OH)3.',
+                        ' S.',
+                        ' Na2O.'
+                    ],
+                    answer : ' Al(OH)3.'
+                },
+                {
+                    index : 'Câu 5: ',
+                    question_content : 'Chất nào sau đây là oxit axit?',
+                    answer_list : [
+                        ' K2O.',
+                        ' CO2.',
+                        ' Fe2O3.',
+                        ' MgO.'
+                    ],
+                    answer : ' CO2.'
+                },
+                {
+                    index : 'Câu 6: ',
+                    question_content : 'Chất nào sau đây có tính bazơ?',
+                    answer_list : [
+                        ' HNO3.',
+                        ' Mg(OH)2',
+                        ' Na.',
+                        ' CO.'
+                    ],
+                    answer : ' Mg(OH)2'
+                },
+                {
+                    index : 'Câu 7: ',
+                    question_content : 'Dung dịch CuSO4 phản ứng được với chất nào trong các chất sau?',
+                    answer_list : [
+                        ' KOH.',
+                        ' ZnCl2',
+                        ' HCl.',
+                        ' Fe2O3.'
+                    ],
+                    answer : ' KOH.'
+                },
+                {
+                    index : 'Câu 8: ',
+                    question_content : 'Chất nào trong số các chất sau bị nhiệt phân hủy?',
+                    answer_list : [
+                        ' H2SO4.',
+                        ' ZnO',
+                        ' Fe(OH)3.',
+                        ' Al.'
+                    ],
+                    answer : ' Fe(OH)3.'
+                },
+                {
+                    index : 'Câu 9: ',
+                    question_content : 'Phản ứng giữa kim loại và phi kim (trừ oxi) tạo thành',
+                    answer_list : [
+                        ' axit.',
+                        ' bazơ',
+                        ' muối',
+                        ' oxit.'
+                    ],
+                    answer : ' muối'
+                },
+                {
+                    index : 'Câu 10: ',
+                    question_content : 'Phản ứng giữa oxi và phi kim tạo thành',
+                    answer_list : [
+                        ' muối.',
+                        ' oxit',
+                        ' bazơ',
+                        ' axit.'
+                    ],
+                    answer : ' oxit'
+                },
+                {
+                    index : 'Câu 11: ',
+                    question_content : 'Hỗn hợp X gồm CaO và CaCO3. Cho 16 gam X phản ứng hoàn toàn với dung dịch HCl dư, thu được 2,24 lit khí CO2 (ở đktc). Phần trăm (%) khối lượng của CaCO3 trong X là',
+                    answer_list : [
+                        ' 47,5.',
+                        ' 37,5.',
+                        ' 52,5',
+                        ' 62,5.'
+                    ],
+                    answer : ' 62,5.'
+                },
+                {
+                    index : 'Câu 12: ',
+                    question_content : 'Axit sunfuric có thể được điều chế trong công nghiệp từ quặng sắt pirit (chứa 75% FeS2) qua các giai đoạn như sau: FeS2 → SO2  →  SO3  →  H2SO4',
+                    answer_list : [
+                        ' 54,0.',
+                        ' 40,5.',
+                        ' 144,0',
+                        ' 72,0.'
+                    ],
+                    answer : ' 72,0.'
+                },
+                {
+                    index : 'Câu 13: ',
+                    question_content : 'Kim loại nào hoạt động hóa học mạnh nhất trong số các kim loại sau?',
+                    answer_list : [
+                        ' Cu.',
+                        ' Al',
+                        ' Ag',
+                        ' Fe.'
+                    ],
+                    answer : ' Al'
+                },
+                {
+                    index : 'Câu 14: ',
+                    question_content : `Cho các biện pháp sau:
+(1). Thường xuyên ngâm kim loại trong nước sạch.           (2). Bôi dầu mỡ lên bề mặt kim loại.
+(3). Sản xuất các hợp kim dễ bị ăn mòn.                             (4). Bọc kim loại bằng giấy, vải thấm ướt.
+         Có bao nhiêu biện pháp có tác dụng bảo vệ kim loại tránh bị ăn mòn?
+`,
+                    answer_list : [
+                        ' 1.',
+                        ' 2',
+                        ' 3',
+                        ' 4.'
+                    ],
+                    answer : ' 1.'
+                },
+                {
+                    index : 'Câu 15: ',
+                    question_content : 'Để tinh chế dung dịch ZnCl2 có lẫn tạp chất CuCl2, có thể dùng lượng dư kim loại',
+                    answer_list : [
+                        ' Fe.',
+                        ' Zn',
+                        ' Cu',
+                        ' Al.'
+                    ],
+                    answer : ' Zn'
+                },
+            ]
+        })
+    </script>
+</body>
+</html>

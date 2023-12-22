@@ -1,30 +1,101 @@
 .heading{
     text-align: center;
 }
+.content__indexing{
+    padding: 0 15px;
+    font-size: 10px;
+}
+.content__indexing .content__indexing{
+    font-size: 0.99em;
+}
 .content__order{
-    font-size: 28px;
+    margin-left: -15px;
+}
+/* 24px 28px */
+.content__order{
+    font-size: 2.8em;
 }
 .content__section-name{
     display: inline-block;
+    font-size: 2.4em;
 }
 .content__list{
-    margin: 20px 30px 0;
+    margin: 20px 0;
     list-style: none;
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: 18px;
 }
 .content__items{
     margin-bottom: 20px;
-    width: 800px;
     max-width: calc(100% - 32px);
 }
 .content__img{
-    width: 100%;
+    width: 800px;
+    max-width: 100%;
     transition: all .2s ease;
 }
 .content__img:hover{
     cursor: pointer;
     opacity: 0.8;
     transform: translateY(-5px);
+}
+.content__question-content,
+.content__answers-content{
+    line-height: 1.6;
+}
+.content__answers-list{
+    list-style: none;
+    margin-left: 15px;
+}
+.content__answers-items{
+    margin: 10px 0;
+    border-radius: 4px;
+    display: flex;
+}
+.content__answers-items label {
+    margin: 0 5px;
+    flex: 1;
+}
+.content__submit{
+    border: none;
+    padding: 25px;
+    background-color: #000;
+    color: #fff;
+    font-size: 18px;
+    outline: none;
+    transition: transform .2s ease;
+}
+.content__answer--success{
+    border: 1px solid #71be34;
+    background-color: #8eeb74fb;
+}
+.content__answer--error{
+    border: 1px solid #ff0000;
+    background-color: #eec3c3c4;
+}
+.content__submit:hover{
+    opacity: 0.8;
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+/* download btn */
+.download-doc-btn{
+    width: 200px;
+    height: 50px;
+    background-color: #000;
+    border: none;
+    transition: transform .2s ease;
+}
+.download-doc-btn a{
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+}
+.download-doc-btn:hover{
+    transform: translateY(-5px);
+    cursor: pointer;
+    opacity: 0.8;
 }
