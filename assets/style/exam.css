@@ -32,7 +32,6 @@
     max-width: calc(100% - 32px);
 }
 .content__img{
-    width: 800px;
     max-width: 100%;
     transition: all .2s ease;
 }
@@ -57,6 +56,7 @@
 .content__answers-items label {
     margin: 0 5px;
     flex: 1;
+    cursor: pointer;
 }
 .content__submit{
     border: none;
@@ -66,6 +66,8 @@
     font-size: 18px;
     outline: none;
     transition: transform .2s ease;
+    margin: 10px 0;
+
 }
 .content__answer--success{
     border: 1px solid #71be34;
@@ -74,6 +76,14 @@
 .content__answer--error{
     border: 1px solid #ff0000;
     background-color: #eec3c3c4;
+}
+.content__required-mess{
+    color: #f00;
+    background-color: #eec3c3c4;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ff0000;
+    white-space: nowrap;
 }
 .content__submit:hover{
     opacity: 0.8;
@@ -98,4 +108,20 @@
     transform: translateY(-5px);
     cursor: pointer;
     opacity: 0.8;
+}
+.content__point{
+    font-size: 18px;
+}
+.content__answer-explain{
+    width: 800px;
+}
+.content__answer-sheet, .content__answer-sheet td, .content__answer-sheet th{
+    border: 1px solid #000;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 5px;
+}
+.content__answer-sheet th{
+    text-transform: uppercase;
+    padding: 10px;
 }
