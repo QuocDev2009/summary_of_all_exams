@@ -18,6 +18,21 @@ function choice_question(query){
         this.appendChild(trElement)
         return trElement
     }
+    // mix question
+    function mix_question(array){
+        var result = []
+        var array_length = array.length
+        for (var i = 0; i<array_length; i++){
+            var random_index = Math.floor(Math.random()*array.length)
+            result.push(array[random_index])
+            result[result.length-1].index = `Câu ${i+1} :`
+            array.splice(random_index,1)
+        }
+        return result
+    }
+    // mix
+    query.question_list = mix_question(query.question_list)
+    // select element
     var formElement = document.querySelector(query.form)
     var submitBtn = document.querySelector(query.submit_selector)
     var right_ans_count_element = document.querySelector(query.rightCount)
@@ -100,6 +115,7 @@ function choice_question(query){
         question_element.appendChild(required_mess_element)
     })
     // submit answer
+    var isFirst = true
     submitBtn.addEventListener('click', function(e){
         // validator
         var isChooseAll = true
@@ -110,7 +126,7 @@ function choice_question(query){
                 isChooseAll = false
             }
         })
-        if (isChooseAll){
+        if (isChooseAll && isFirst){
             // check answer
             var right_answers = 0
             var tableELement = document.querySelector(query.answer_sheet)
@@ -121,6 +137,8 @@ function choice_question(query){
                 thElement.textContent = value
                 trElement.appendChild(thElement)
             })
+            // after submit
+            isFirst = false
             // get table element
             answer_element_list.forEach(function(element){
                 var element_choosed = find_element_choosed(element.element)

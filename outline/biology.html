@@ -97,6 +97,19 @@
                             </li>
                         </ul>
                     </div>
+                    <div class="content__indexing">
+                        <b class="content__order">II / </b>
+                        <h2 class="content__section-name">Phần bài tập</h2>
+                        <ul class="content__list">
+                            <div class="wrapper">
+                               
+                            </div>
+                            <span class="content__point"></span>
+                            <button class="content__submit">Nộp bài trắc nhiệm</button>
+                            <table class="content__answer-sheet">
+                            </table>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -123,8 +136,456 @@
         </div>
     </div>
     <script src="../assets/script/modal.js"></script>
+    <script src="../assets/script/choice.js"></script>
     <script>
         showImg('.content__img', '.modal.modal-img','.modal__img', '.modal-img .modal__closeBtn', '.modal-img .modal__download')
+    </script>
+    <script>
+        choice_question({
+            form: '.content__list .wrapper',
+            answer_sheet : '.content__answer-sheet',
+            answer_sheet__heading : [
+                'Câu hỏi',
+                'bạn đã chọn',
+                'đáp án đúng',
+                'giải thích'
+            ],
+            answer_explain_css : 'content__answer-explain',
+            submit_selector : '.content__submit',
+            rightCount : '.content__point',
+            element_class : 'content__items',
+            question_box : 'content__question',
+            question_index_css : 'content__question-indexing',
+            question_content_css : 'content__question-content',
+            answer_box : 'content__answers-items',
+            answer_index_css: 'content__answers-indexing',
+            answer_content_css : 'content__answers-content',
+            answer_list_css : 'content__answers-list',
+            success_css : 'content__answer--success',
+            error_css : 'content__answer--error',
+            require_mess : 'Vui lòng trả lời câu hỏi này',
+            require_mess_css : 'content__required-mess',
+            question_list : [
+                {
+                    question_content : 'Loại nucleotit nào sau đây không có trong cấu tạo của phân tử ADN',
+                    answer_list : [
+                        'Adenin',
+                        'Uraxin',
+                        'Timin',
+                        'Guanin'
+                    ],
+                    answer : 'Uraxin',
+                    explain : 'Trong ADN chỉ có Adenin, Timin, Guanin, Xitozin'
+                },
+                {
+                    question_content : '1 gen có 6800 nucleotit. Theo mô hình J. Oatxơn và F. Crick thì gen đó có bao nhiêu chu kì xoắn',
+                    answer_list : [
+                        '3,4',
+                        '34',
+                        '340',
+                        '3400'
+                    ],
+                    answer : '340',
+                    explain : 'Theo mô hình của J. Oatxơn và F. Crick thì 1 chu kì xoắn có 20 nucleotit ==> 6800/20 = 340 (vòng)'
+                },
+                {
+                    question_content : 'Ở cà chua lưỡng bội, tính trạng quả đỏ trội hoàn toàn so với quả vàng. Theo lý thuyết, nếu cho cà chua quả đỏ thuần chủng lai phân tích thì kiểu hình ở đời cao là: ',
+                    answer_list : [
+                        '100% cây quả đỏ',
+                        '100% cây quả vàng',
+                        '50% cây quả đỏ : 50% cây quả vàng',
+                        '75% cây quả đỏ : 25% cây quả vàng'
+                    ],
+                    answer : '100% cây quả đỏ',
+                    explain : 'Vì cà chua đỏ thuần chủng và trội hơn cà chua và nên cà chua đỏ là : AA vì đem lên phân tích với cà chua vàng nên cà chua vàng là aa. Lai AA vs aa tạo ra Aa(là quả đỏ)'
+                },
+                {
+                    question_content : 'Gen và protein có mối quan hệ với nhau thông qua cấu trúc trung gian nào sau đây?',
+                    answer_list : [
+                        'mARN',
+                        'tARN',
+                        'rARN',
+                        'ADN'
+                    ],
+                    answer : 'mARN',
+                    explain : 'Vì mARN có vai trò truyền đạt thông tin và cấu trúc của protein sắp được tổng hợp từ nhân ra tế bào chất.'
+                },
+                {
+                    question_content : '1 NST( nhiễm sắc thể) có trình tự các gen là GHI.KLM. Sau khi đột biến, NST có trình tự gen là GHI.KLKLM. Đây là dạng đột biến nào?',
+                    answer_list : [
+                        'Đột biến gen',
+                        'Lặp đoạn NST',
+                        'Đảo đoạn NST',
+                        'Mất đoạn NST'
+                    ],
+                    answer : 'Lặp đoạn NST',
+                    explain : 'Lặp lại đoạn KL'
+                },
+                {
+                    question_content : 'Điều nào sau đây đúng khi nói về phân tử ARN?',
+                    answer_list : [
+                        'Gồm 4 loại nucleotit là A, T, G, X',
+                        'Cấu tạo gồm 2 mạch xoắn song song',
+                        'cấu tạo từ các nguyên tố C, H, O, N, P',
+                        'Cấu tạo gồm 2 mạch thẳng song song'
+                    ],
+                    answer : 'cấu tạo từ các nguyên tố C, H, O, N, P',
+                    explain : 'Không chọn câu (a) vì ARN không có Timin. Không chọn câu (c) và câu (d) vì ARN chỉ có 1 mạch đơn chứ không phải 2 mạch'
+                },
+                {
+                    question_content : 'Phép lai được sử dụng nhằm mục đích xác định: ',
+                    answer_list : [
+                        'Kiểu gen mang tính trạng trội',
+                        'Kiểu hình mang tính trạng trội',
+                        'Kiểu gen mang tính trạng lặn',
+                        'Kiểu hình mang tính trạng lặn'
+                    ],
+                    answer : 'Kiểu gen mang tính trạng trội',
+                    explain : 'Mục đích: Để xác định kiểu gen của cá thể mang tính trạng trội. - Xác định kiểu gen của sinh vật mang tính trạng trội là đồng hợp tử ( thuần chủng ) hay dị hợp tử ( không thuần chủng )'
+                },
+                {
+                    question_content : 'Nhận định nào sau đây đúng khi nói về thường biến?',
+                    answer_list : [
+                        'Di truyền qua sinh sản hữu tính',
+                        'Đột biến làm biến đổi kiểu gen',
+                        'Chỉ biến đổi kiểu hình',
+                        'Biểu hiện riêng lẻ, không định hướng'
+                    ],
+                    answer : 'Chỉ biến đổi kiểu hình',
+                    explain : 'Tính chất của thường biến: là đột biến không di truyền, chỉ biến đổi kiểu hình không biến đổi kiểu gen, biểu hiện đồng loạt, theo hướng xác đinh có lợi cho sinh vật'
+                },
+                {
+                    question_content : '2 chuỗi aa(axit amin) kết hợp với nhau tạo nên cấu trúc protein bậc mấy?',
+                    answer_list : [
+                        'Bậc 1',
+                        'Bậc 2',
+                        'Bậc 3',
+                        'Bậc 4'
+                    ],
+                    answer : 'Bậc 4',
+                    explain : ''
+                },
+                {
+                    question_content : 'Các tính trạng di truyền biến đổi nếu NST bị biến đổi: ',
+                    answer_list : [
+                        'Cấu trúc',
+                        'Cấu trúc và số lượng',
+                        'Số lượng',
+                        'Hình dạng'
+                    ],
+                    answer : 'Cấu trúc và số lượng',
+                    explain : 'Các tính trạng di truyền bị biến đổi nếu NST bị biến đổi cấu trúc, số lượng.'
+                },
+                {
+                    question_content : 'Dạng đột biến nào sau đây làm tăng số lượng nucleotit trong gen',
+                    answer_list : [
+                        'Thêm 1 cặp A-T',
+                        'Mất cặp G-X, thêm 1 cặp A-T',
+                        'Mất cặp G-X',
+                        'Thay thế cặp A-T bằng cặp G-X'
+                    ],
+                    answer : 'Thêm 1 cặp A-T',
+                    explain : 'Thêm thì tăng số lượng nucleotit thôi'
+                },
+                {
+                    question_content : 'Ở người, tế bào sinh dưỡng ở thể dị bội (2n-1) có số lượng NST là bao nhiêu?',
+                    answer_list : [
+                        '22',
+                        '23',
+                        '45',
+                        '47'
+                    ],
+                    answer : '45',
+                    explain : 'ở người, 2n = 46 ==> 2n-1 = 45'
+                },
+                {
+                    question_content : '1 hợp tử ruồi giấm nguyên phân liên tiếp 4 lần. Số tế bào con tạo ra là: ',
+                    answer_list : [
+                        '2',
+                        '4',
+                        '8',
+                        '16'
+                    ],
+                    answer : '16',
+                    explain : 'Mỗi lần nguyên phân tạo ra 2 tế bào con. nguyên phân liên tiếp 4 lần tạo ra 2x2x2x2 = 16 tế bào'
+                },
+                {
+                    question_content : 'Nhóm sinh vật nào sau đây có NST giới tính XY trong tế bào 2n của giới cái',
+                    answer_list : [
+                        'Chim, ếch, bò sát',
+                        'Bò, vịt, cừu',
+                        'Người, gà, ruối giấm',
+                        'người, tinh tinh'
+                    ],
+                    answer : 'Chim, ếch, bò sát',
+                    explain : 'Chim, ếch, bò sát có NST giới tính cái là XY'
+                },
+                {
+                    question_content : '1 gen nằm trên ADN mạch kép có 120 chu kì xoắn. Hỏi gen này có bao nhiêu nucleotit',
+                    answer_list : [
+                        '3600',
+                        '1200',
+                        '120',
+                        '2400'
+                    ],
+                    answer : '2400',
+                    explain : 'Mỗi chu kì xoắn của ADN có 20 nucleotit ==> 120 vòng xoắn có số nucleotit là 120x20 = 2400 (nu)'
+                },
+                {
+                    question_content : 'Gọi A, T, G, X lần lượt là số lượng nucleotit các loại tương ứng trên phẩn tử ADN mạch kép thì theo NTBS, biểu thức nào sau đây là đúng?',
+                    answer_list : [
+                        'A + T = G + X',
+                        'A/X = G/T',
+                        'X + T = A + G',
+                        'X - G = A + T'
+                    ],
+                    answer : 'X + T = A + G',
+                    explain : 'Theo NTBS, A = T, G = X ==> X + T = A + G'
+                },
+                {
+                    question_content : 'Loại đột biến nào sau đây không làm thay đổi số lượng các loại nucleotit trong gen?',
+                    answer_list : [
+                        'Thêm 1 cặp A-T',
+                        'Mất 1 cặp G-X',
+                        'Thay thế 1 cặp A-T bằng 1 cặp G-X',
+                        'Mất 1 cặp A-T và thêm 2 cặp G-X'
+                    ],
+                    answer : 'Thay thế 1 cặp A-T bằng 1 cặp G-X',
+                    explain : 'Thay thế thì làm gì có thay đổi số lượng'
+                },
+                {
+                    question_content : 'Một NST có trình tự các gen là XYZT. Sau khi đột biến, NST có trình tự gen là: XYZTZT. Đây là dạng đột biến nào?',
+                    answer_list : [
+                        'Đột biến gen',
+                        'Lặp đoạn NST',
+                        'Đảo đoạn NST',
+                        'Mất đoạn NST'
+                    ],
+                    answer : 'Lặp đoạn NST',
+                    explain : 'Lặp đoạn ZT'
+                },
+                {
+                    question_content : 'NST tồn tại thành từng chiếc đơn lẻ trong loại tế bào nào?',
+                    answer_list : [
+                        'Tế bào sinh dục sơ khai',
+                        'Tế bào giao tử',
+                        'Tế bào sinh dưỡng',
+                        'Tế bào sinh dục chín'
+                    ],
+                    answer : 'Tế bào giao tử',
+                    explain : 'NST tồn tại thành từng chiếc đơn lẻ trong loại tế bào giao tử'
+                },
+                {
+                    question_content : 'Biến dị tổ hợp là: ',
+                    answer_list : [
+                        'Làm thay đổi kiểu hình đã có',
+                        'Tổ hợp lại tính trạng đã có ở bố hoặc mẹ',
+                        'Tạo ra những biến đổi đồng loạt',
+                        'Cả A và B'
+                    ],
+                    answer : 'Tổ hợp lại tính trạng đã có ở bố hoặc mẹ',
+                    explain : 'Biến dị tổ hợp là: tổ hợp lại tính trạng đã có ở bố hoặc mẹ'
+                },
+                {
+                    question_content : 'Loại nucleotit nào chỉ có ở ARN mà không có ở ADN?',
+                    answer_list : [
+                        'Guanin',
+                        'Xitozin',
+                        'Timin',
+                        'Uraxin'
+                    ],
+                    answer : 'Uraxin',
+                    explain : 'ADN chi có các loại nucleotit: Adenin, Timin, Guanin, Xitozin'
+                },
+                {
+                    question_content : 'Protein được cấu tạo từ mấy nguyên tố chính?',
+                    answer_list : [
+                        '4',
+                        '5',
+                        '2',
+                        '6'
+                    ],
+                    answer : '4',
+                    explain : 'Protein được cấu tạo từ các nguyên tố chính là: C, H, O, N'
+                },
+                {
+                    question_content : 'Ở người, sự tăng thêm 1 NST ở cặp NST thứ 21 đã làm phát sinh hội chứng nào?',
+                    answer_list : [
+                        'Hội chứng Claiphentơ',
+                        'Hội chứng Đao',
+                        'Hội chứng Tocnơ',
+                        'Hội chứng 3X'
+                    ],
+                    answer : 'Hội chứng Đao',
+                    explain : ''
+                },
+                {
+                    question_content : 'Quá trình tự nhân đôi ADN tại các NST diễn ra ở kì nào?',
+                    answer_list : [
+                        'Kì trung gian',
+                        'Kì đầu',
+                        'Kì giữa',
+                        'Kì sau'
+                    ],
+                    answer : 'Kì trung gian',
+                    explain : 'Quá trình tự nhân đôi ADN tại các NST diễn ra ở kì trung gian'
+                },
+                {
+                    question_content : 'Củ cải có bộ NST 2n = 18, thể tam bội của loài này có bao nhiêu NST trong mỗi tế bào sinh dưỡng?',
+                    answer_list : [
+                        '27',
+                        '18',
+                        '51',
+                        '36'
+                    ],
+                    answer : '27',
+                    explain : '2n = 18 ==> n = 9 ==> 3n = 9*3 = 27'
+                },
+                {
+                    question_content : 'Đơn phân của protein là gì?',
+                    answer_list : [
+                        'Glucôzơ',
+                        'Axit amin',
+                        'Glixêrin',
+                        'Axit béo'
+                    ],
+                    answer : 'Axit amin',
+                    explain : ''
+                },
+                {
+                    question_content : 'Phép lai nào sau đây F1 chỉ cho 1 loại kiểu gen?',
+                    answer_list : [
+                        'P: AA x aa',
+                        'P: Aa x Aa',
+                        'P: Aa x aa',
+                        'cả B và C'
+                    ],
+                    answer : 'P: AA x aa',
+                    explain : 'AA x aa chỉ tạo ra 1 loại kiểu gen là Aa'
+                },
+                {
+                    question_content : 'Trạng thái NST ở kì cuối của quá trình nguyên phân là: ',
+                    answer_list : [
+                        'Đóng xoắn cực đại',
+                        'Giãn xoắn',
+                        'Bắt đầu đóng xoắn',
+                        'Bắt đầu tháo xoắn'
+                    ],
+                    answer : 'Giãn xoắn',
+                    explain : ''
+                },
+                {
+                    question_content : 'Loại nào dưới đây có số cặp NST XX là đực còn XY là cái?',
+                    answer_list : [
+                        'Ruồi giấm',
+                        'Người',
+                        'Động vật thuộc lớp chim',
+                        'Động vật có vú'
+                    ],
+                    answer : 'Người',
+                    explain : ''
+                },
+                {
+                    question_content : 'Kiểu gen nào được xem là thuần chủng',
+                    answer_list : [
+                        'AA và aa',
+                        'Aa',
+                        'AA và Aa',
+                        'AA, Aa và aa'
+                    ],
+                    answer : 'AA và aa',
+                    explain : 'Kiểu gen thuần chủng là kiểu gen mà tất cả các cặp gen đều ở trạng thái đồng hợp.'
+                },
+                {
+                    question_content : 'Đối tượng thí nghiệm của Menđen là: ',
+                    answer_list : [
+                        'Đậu xanh',
+                        'Đậu đỏ',
+                        'Đậu Hà Lan',
+                        'Đậu trắng'
+                    ],
+                    answer : 'Đậu Hà Lan',
+                    explain : 'Đối tượng thí nghiệm của Menđen là: đậu Hà Lan'
+                },
+                {
+                    question_content : 'Tính trạng được biểu hiện ở cơ thể F1 được gọi là: ',
+                    answer_list : [
+                        'Tính trạng lặn',
+                        'Tính trạng trội',
+                        'Tính trạng tương ứng',
+                        'Tính trạng trung gian'
+                    ],
+                    answer : 'Tính trạng trội',
+                    explain : 'Tính trạng được biểu hiện ở cơ thể F1 được gọi là: tính trạng trội'
+                },
+                {
+                    question_content : 'Giao tử được kí hiệu là: ',
+                    answer_list : [
+                        'G',
+                        'P',
+                        'F',
+                        'F1'
+                    ],
+                    answer : 'G',
+                    explain : 'Giao tử được kí hiệu là: G'
+                },
+                {
+                    question_content : 'Trên cơ sở lai 1 cặp tính trạng Menđen đã phát hiện ra: ',
+                    answer_list : [
+                        'Quy luật đồng tính',
+                        'Quy luật phân li',
+                        'Quy luật đồng tính và quy luật phân li',
+                        'Quy luật phân li độc lập'
+                    ],
+                    answer : 'Quy luật đồng tính và quy luật phân li',
+                    explain : 'Trên cơ sở lai 1 cặp tính trạng Menđen đã phát hiện ra: quy luật đồng tính và quy luật phân li'
+                },
+                {
+                    question_content : 'Phép lai cho tỉ lệ kiểu hình 9:3:3:1 là: ',
+                    answer_list : [
+                        'AABB x AAbb',
+                        'AABB x aabb',
+                        'AABb x aabb',
+                        'AaBb x AaBb'
+                    ],
+                    answer : 'AaBb x AaBb',
+                    explain : 'Tự lại rồi biết'
+                },
+                {
+                    question_content : 'P: AABB x aabb. Các kiểu gen thuần chủng xuất hiện ở F2 là: ',
+                    answer_list : [
+                        'AABB và AAbb',
+                        'AABB và aaBB',
+                        'AABB, AAbb và aaBB',
+                        'AABB, AAbb, aaBB, aabb'
+                    ],
+                    answer : 'AABB, AAbb, aaBB, aabb',
+                    explain : 'Tự lai rồi biết'
+                },
+                {
+                    question_content : 'Muốn lai phân tích, người ta cho đối tượng nghiên cứu lai với: ',
+                    answer_list : [
+                        'Bố mẹ',
+                        'F1',
+                        'Cá thể đồng hợp lặn',
+                        'Tự thụ phấn'
+                    ],
+                    answer : 'Cá thể đồng hợp lặn',
+                    explain : 'Lai phân tích là phép lai giữa cá thể mang tính trạng trội cần xác định kiểu gen với cá thể mang tính trạng lặn. Kiểu gen là tổ hợp toàn bộ các gen trong tế bào của cơ thể.'
+                },
+                {
+                    question_content : 'Từ 2 alen B và b, sự tổ hợp của chúng tạo thành mấy kiểu gen khác nhau?',
+                    answer_list : [
+                        '1',
+                        '2',
+                        '3',
+                        '4'
+                    ],
+                    answer : '3',
+                    explain : 'Từ 2 alen b và B có thể tạo ra các kiểu gen: BB, Bb, bb'
+                },
+            ]
+        })
     </script>
 </body>
 </html>
