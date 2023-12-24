@@ -46,6 +46,8 @@ function choice_question(query){
         var question_content_element = document.createElement('span')
         var answer_list_element = document.createElement('ul')
         var required_mess_element = document.createElement('span')
+        // answer handler
+        if (typeof question.answer === 'number') question.answer = question.answer_list[question.answer-1]
         // add class
         question_content_element.classList.add(query.question_content_css)
         index_element.classList.add(query.question_index_css)

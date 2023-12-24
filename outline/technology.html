@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đề cương ôn tập môn công nghệ</title>
+    <link rel="stylesheet" href="../assets/style/style.css">
+    <link rel="stylesheet" href="../assets/style/base.css">
+    <link rel="stylesheet" href="../assets/fonts/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="../assets/style/exam.css">
+    <link rel="stylesheet" href="../assets/style/reponsive.css">
+    <link rel="icon" href="../assets/img/web_icon.jpg">
+</head>
+<body>
+    <div class="main">
+        <!-- Header -->
+        <div class="header">
+            <div class="grid">
+                <h1 class="header__heading">Đề cương môn công nghệ</h1>
+                <h2 class="header__desc isRequired">Đây là đề cương ôn tập môn công nghệ</h2>
+                <div class="header__bot">
+                    <ul class="header__list">
+                        <li class="header__list-items" onclick="showModal('.modal','button.modal__closeBtn', '.modal__heading', '.modal__content','Thông tin về tác giả', [
+                            'Tên tác giả: Thủy Ngọc Quốc',
+                            'Sinh ngày: 12/9/2009',
+                            'Hiện tại đang là học sinh lớp 9/3 tại trường THCS Huỳnh Thúc Kháng',
+                            'Thường trú: Xã Bình Phục, Huyện Thăng Bình, Tỉnh Quảng Nam',
+                            'Là 1 người rất đam mê công việc lập trình và tôi đã quyết định tạo web này'
+                    ])">
+                            <span class="header__list-items-text">
+                                Thông tin tác giả
+                            </span>
+                            <i class="header__list-items-icon ti-user"></i>
+                        </li>
+                        <li class="header__list-items" onclick="showModal('.modal','button.modal__closeBtn', '.modal__heading', '.modal__content','Web của tôi có gì?', [
+                        'Nó có những đề cương ôn tập từ nhiều nguồn gửi về',
+                        'Có những bộ đề thực tế qua các kì thi trước đó',
+                        'Có bộ máy chấm trắc nhiệm tự động cùng với đó là kết quả của các bài tự luận'
+                ])">
+                            <span class="header__list-items-text">
+                                Web của tôi có gì?
+                            </span>
+                            <i class="header__list-items-icon ti-info"></i>
+                        </li>
+                    </ul>
+                    <ul class="header__list">
+                        
+                        <li class="header__list-items" onclick="showModal('.modal','button.modal__closeBtn', '.modal__heading', '.modal__content','Thông tin về lộ trình luyện tập', [
+                        'Sắp tới tầm 1 đến 2 tuần nx sẽ là cuộc thi cuối học kì 1',
+                        'Để giúp mọi người có công cụ hỗ trợ ôn tập hiệu quả tôi đã quyết định tạo ra trang web này'
+                ])">
+                            <span class="header__list-items-text">
+                                Lí do tạo web
+                            </span>
+                            <i class="header__list-items-icon ti-world"></i>
+                        </li>
+                        <li class="header__list-items">
+                            <a href="../index.html" class="header__list-items-text">
+                                Trang chủ
+                            </a>
+                            <a href="../index.html">
+                                <i class="header__list-items-icon ti-home"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="grid">
+                <h1 class="heading">Đề cương ôn tập môn công nghệ cuối kì 1 lớp 9</h1>
+                <div class="content">
+                    <div class="content__indexing">
+                        <b class="content__order">I / </b>
+                        <h2 class="content__section-name">Phần bài tập</h2>
+                        <ul class="content__list">
+                            <div class="wrapper">
+                               
+                            </div>
+                            <span class="content__point"></span>
+                            <button class="content__submit">Nộp bài trắc nhiệm</button>
+                            <table class="content__answer-sheet">
+                            </table>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal">
+        <div class="modal__container modal__text">
+            <div class="modal__heading"></div>
+            <div class="modal__content">
+            </div>
+            <div class="modal__bottom">
+                <button class="modal__closeBtn">Đã hiểu</button>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal modal-img">
+        <div class="modal__container">
+            <img src="" alt="" class="modal__img">
+            <button class="modal__closeBtn">Đã hiểu</button>
+            <a class="modal__download">
+                <span class="modal__download--text">Tải xuống</span>
+                <i class="modal__download--icon ti-import"></i>
+            </a>
+        </div>
+    </div>
+    <script src="../assets/script/modal.js"></script>
+    <script src="../assets/script/choice.js"></script>
+    <script>
+        showImg('.content__img', '.modal.modal-img','.modal__img', '.modal-img .modal__closeBtn', '.modal-img .modal__download')
+    </script>
+    <script>
+        choice_question({
+            form: '.content__list .wrapper',
+            answer_sheet : '.content__answer-sheet',
+            answer_sheet__heading : [
+                'Câu hỏi',
+                'bạn đã chọn',
+                'đáp án đúng',
+                'giải thích'
+            ],
+            answer_explain_css : 'content__answer-explain',
+            submit_selector : '.content__submit',
+            rightCount : '.content__point',
+            element_class : 'content__items',
+            question_box : 'content__question',
+            question_index_css : 'content__question-indexing',
+            question_content_css : 'content__question-content',
+            answer_box : 'content__answers-items',
+            answer_index_css: 'content__answers-indexing',
+            answer_content_css : 'content__answers-content',
+            answer_list_css : 'content__answers-list',
+            success_css : 'content__answer--success',
+            error_css : 'content__answer--error',
+            require_mess : 'Vui lòng trả lời câu hỏi này',
+            require_mess_css : 'content__required-mess',
+            question_list : [
+                {
+                    question_content : 'Người lao động trong nghề điện dân dụng phải đảm bảo mấy yêu cầu',
+                    answer_list : [
+                        '1',
+                        '2',
+                        '3',
+                        '4'
+                    ],
+                    answer : 4,
+                    explain : ''
+                },
+                {
+                    question_content : 'Nghề điện dân dụng có mấy đối tương lao động chính',
+                    answer_list : [
+                        '1',
+                        '3',
+                        '5',
+                        '7'
+                    ],
+                    answer : '5',
+                    explain : `1.Thiết bị bảo vệ, đóng cắt và lấy điện.
+2.Nguồn điện một chiều và xoay chiều.
+3.Thiết bị đo lường điện.
+4.Vật liệu và dụng cụ làm việc của nghề điện.
+5.Các loại đồ dùng điện.`
+                },
+                {
+                    question_content : 'người mắc bệnh nào sau đây không thể lao động trong nghề điện dân dụng',
+                    answer_list : [
+                        'Tim mạch',
+                        'Huyết áp',
+                        'Thấp khớp',
+                        'Cả 3 đáp án trên'
+                    ],
+                    answer : 4,
+                    explain : ''
+                },
+                {
+                    question_content : 'Yêu cầu thứ nhất đối với người lao động trong nghề điện dân dụng là: ',
+                    answer_list : [
+                        'Kiến thức',
+                        'Kĩ năng',
+                        'Thái độ',
+                        'Sức khỏe'
+                    ],
+                    answer : 'Kiến thức',
+                    explain : 'Các yêu cầu: 1.kiến thức, 2.kĩ năng, 3.thái độ, 4.sức khỏe'
+                },
+                {
+                    question_content : 'Yêu cầu tư nhất đối với người lao động trong nghề điện dân dụng là: ',
+                    answer_list : [
+                        'Kiến thức',
+                        'Kĩ năng',
+                        'Thái độ',
+                        'Sức khỏe'
+                    ],
+                    answer : 'Sức khỏe',
+                    explain : 'Các yêu cầu: 1.kiến thức, 2.kĩ năng, 3.thái độ, 4.sức khỏe'
+                },
+                {
+                    question_content : 'Trên kí hiệu của dây dẫn điện là: M(nxF). Hãy cho biết M là gì?',
+                    answer_list : [
+                        'Lõi đồng',
+                        'Số lõi dây',
+                        'Tiết diện lõi dây',
+                        'Cả 3 đáp án trên'
+                    ],
+                    answer : 'Lõi đồng',
+                    explain : 'M là lõi đồng, n là số lượng lõi dây, F là tiết diện lõi dây'
+                },
+                {
+                    question_content : 'Trên kí hiệu của dây dẫn điện là: M(nxF). Hãy cho biết F là gì?',
+                    answer_list : [
+                        'Lõi đồng',
+                        'Số lõi dây',
+                        'Tiết diện lõi dây',
+                        'Cả 3 đáp án trên'
+                    ],
+                    answer : 'Tiết diện lõi dây',
+                    explain : 'M là lõi đồng, n là số lượng lõi dây, F là tiết diện lõi dây'
+                },
+                {
+                    question_content : 'Cấu tạo cáp điện có bộ phận nào dưới đây?',
+                    answer_list : [
+                        'Lõi cáp',
+                        'Vỏ cách điện',
+                        'vỏ bảo vệ',
+                        'Cả 3 đáp án trên'
+                    ],
+                    answer : 'Cả 3 đáp án trên',
+                    explain : 'Cấu tạo cáp điện có các bộ phận: lõi cáp, vỏ cách điện và vỏ bảo vệ'
+                },
+                {
+                    question_content : 'Vật liệu nào được dùng trong truyền tải điện năng?',
+                    answer_list : [
+                        'Dây cáp điện',
+                        'Dẫy dẫn điện',
+                        'Cả A và B đều đúng',
+                        'Đáp án khác'
+                    ],
+                    answer : 'Cả A và B đều đúng',
+                    explain : 'Dây cáp điện và dây dẫn điện được dùng trong truyền tải điện năng'
+                },
+                {
+                    question_content : 'Vỏ cách điện có cấu tạo gồm: ',
+                    answer_list : [
+                        '1 lớp',
+                        'Nhiều lớp',
+                        'Cả A và B đều đúng',
+                        'Đáp án khác'
+                    ],
+                    answer : 'Cả A và B đều đúng',
+                    explain : 'Vỏ cách điện có cấu tạo gồm: 1 lớp hoặc nhiều lớp'
+                },
+                {
+                    question_content : 'Lõi cáp điện được làm bằng gì?',
+                    answer_list : [
+                        'Đồng',
+                        'Nhôm',
+                        'Đồng hoặc nhôm',
+                        'Không xác định'
+                    ],
+                    answer : 'Đồng hoặc nhôm',
+                    explain : 'Lõi cáp điện được làm bằng: đồng hoặc nhôm'
+                },
+                {
+                    question_content : 'Vỏ cách điện làm bằng vật liệu nào sau đây?',
+                    answer_list : [
+                        'Cao su tổng hợp',
+                        'Nhôm',
+                        'Đồng',
+                        'Cả 3 đáp án trên'
+                    ],
+                    answer : 1,
+                    explain : 'Vỏ cách điện làm bằng cao su tổng hợp'
+                },
+                {
+                    question_content : 'Hãy cho biết, A là kí hiệu trên đồng hồ đo điện nào?',
+                    answer_list : [
+                        'Vôn kế',
+                        'Oát kế',
+                        'Ampe kế',
+                        'Công tơ điện'
+                    ],
+                    answer : 3,
+                    explain : 'A là kí hiệu trên đồng hồ đo ampe kế'
+                },
+                {
+                    question_content : 'Hãy cho biết, V là kí hiệu trên đồng hồ đo điện nào?',
+                    answer_list : [
+                        'Vôn kế',
+                        'Oát kế',
+                        'Ampe kế',
+                        'Công tơ điện'
+                    ],
+                    answer : 1,
+                    explain : 'V là kí hiệu trên đồng hồ đo vôn kế'
+                },
+                {
+                    question_content : 'Công dụng của Oát kế là: ',
+                    answer_list : [
+                        'Đo điện áp',
+                        'Đo dòng điện',
+                        'Đo công suất',
+                        'Đo điện năng'
+                    ],
+                    answer : 3,
+                    explain : 'Công dụng của Oát kế là: đo công suất'
+                },
+                {
+                    question_content : 'Công dụng của công tơ điện là: ',
+                    answer_list : [
+                        'Đo điện áp',
+                        'Đo dòng điện',
+                        'Đo công suất',
+                        'Đo điện năng'
+                    ],
+                    answer : 4,
+                    explain : 'Công dụng của công tơ điện kế là: đo điện năng'
+                },
+                {
+                    question_content : 'Thực hành sử dụng đồng hồ đo điện người ta tiến hành tìm hiểu đồng hồ đo điện ở mấy nội dung?',
+                    answer_list : [
+                        '1',
+                        '2',
+                        '3',
+                        '4'
+                    ],
+                    answer : 4,
+                    explain : 'Thực hành sử dụng đồng hồ đo điện người ta tiến hành tìm hiểu đồng hồ đo điện ở 4 nội dung'
+                },
+                {
+                    question_content : 'Chương trình công nghệ 9 giới thiệu mấy cách sử dụng đồng hồ đo điện?',
+                    answer_list : [
+                        '1',
+                        '2',
+                        '3',
+                        '4'
+                    ],
+                    answer : 2,
+                    explain : 'Chương trình công nghệ 9 giới thiệu 2 cách sử dụng đồng hồ đo điện'
+                },
+                {
+                    question_content : 'Đo điện năng tiêu thụ của mạch điện bằng công tơ điện gồm mấy bước',
+                    answer_list : [
+                        '1',
+                        '2',
+                        '3',
+                        '4'
+                    ],
+                    answer : 3,
+                    explain : 'Các bước: 1. Đọc và giải thích kí hiệu ghi trên mặt công tơ điện, 2. Nối mạch điện thực hành, 3. Đo điện năng tiêu thụ của mạch điện'
+                },
+                {
+                    question_content : 'Đo điện trở bằng đồng hồ vạn năng gồm mấy bước',
+                    answer_list : [
+                        '1',
+                        '2',
+                        '3',
+                        '4'
+                    ],
+                    answer : 3,
+                    explain : 'Bước 1: Chuyển đồng hồ vạn năng về thang đo điện trở Ω. Bước 2: Cắm que đo màu đen vào cổng chung COM, que màu đỏ cắm vào cổng V/Ω. Bước 3: Đặt hai que đo của đồng hồ vạn năng vào hai đầu điện trở để đo. Chọn thang đo sát với giá trị đo để có kết quả đo chính xác.'
+                },
+                {
+                    question_content : 'Có mấy loại mối nối dây dẫn điện',
+                    answer_list : [
+                        '1',
+                        '3',
+                        '5',
+                        '7'
+                    ],
+                    answer : 2,
+                    explain : 'Đó là mối nối thẳng, phân nhánh và dùng phụ kiện.'
+                },
+                {
+                    question_content : 'Mối nối dây dẫn phải đảm bảo mấy yêu cầu?',
+                    answer_list : [
+                        '1',
+                        '2',
+                        '3',
+                        '4'
+                    ],
+                    answer : 4,
+                    explain : 'Dẫn điện tốt, Bền chắc (có độ bền cơ học cao), An toàn điện, Mĩ thuật (gọn và đẹp)'
+                },
+                {
+                    question_content : 'Quy trình nối dây gồm mấy bước?',
+                    answer_list : [
+                        '2',
+                        '4',
+                        '6',
+                        '8'
+                    ],
+                    answer : 3,
+                    explain : '1.bóc vỏ cách điện, 2.làm sạch lõi, 3.nối dây, 4. kiểm trả mối nối , 5.hàn mối nối, 6.cách điện mối nối.'
+                },
+                {
+                    question_content : 'Thiết bị nào sau đây có trên bảng điện?',
+                    answer_list : [
+                        'Thiết bị đóng cắt',
+                        'Thiết bị bảo vệ',
+                        'Thiết bị lấy điện',
+                        'Cả 3 đáp án trên'
+                    ],
+                    answer : 4,
+                    explain : `1. Điều khiển bóng đèn.
+2. Bảo vệ mạch điện.
+3. Cấp nguồn cho đồ dùng điện.
+4. Đóng ngắt nguồn điện.`
+                },
+                {
+                    question_content : 'Theo em, có loại bảng điện nào?',
+                    answer_list : [
+                        'Bảng điện chính',
+                        'Bảng điện nhánh',
+                        'Cả A và B đều đúng',
+                        'Cả A và B đều sai'
+                    ],
+                    answer : 3,
+                    explain : 'Có các loại bảng điện: chính và nhánh'
+                },
+                {
+                    question_content : 'Vẽ sơ đồ mạch điện bảng điện có: ',
+                    answer_list : [
+                        'Sơ đồ nguyên lí',
+                        'Sơ đồ lắp đặt',
+                        'Cả A và B đều đúng',
+                        'Cả A và B đều sai'
+                    ],
+                    answer : 3,
+                    explain : ''
+                },
+                {
+                    question_content : 'Vẽ sơ đồ lắp đặt mạch điện phải tiến hành theo mấy bước?',
+                    answer_list : [
+                        '1',
+                        '2',
+                        '3',
+                        '4'
+                    ],
+                    answer : 4,
+                    explain : `Bước 1: Vẽ đường dây nguồn. - Xác định điểm nối nguồn điện vào mạch. ...
+Bước 2: Xác định vị trí để bảng điện, bóng đèn. ...
+Bước 3: Xác định vị trí các thiết bị điện trên bảng điện. ...
+Bước 4: Kết nối các linh kiện và thiết bị điện.`
+                },
+                {
+                    question_content : 'Quy trình lắp mạch điện bảng điện phải tiến hành theo mấy bước?',
+                    answer_list : [
+                        '3',
+                        '4',
+                        '5',
+                        '6'
+                    ],
+                    answer : 3,
+                    explain : `Bước 1: Vạch dấu.
+Bước 2: Khoan lỗ bảng điện.
+Bước 3: Nối dây mạch điện.
+Bước 4: Lắp đặt thiết bị vào bảng điện.
+Bước 5: Kiểm tra lại mạch điện.`
+                },
+                {
+                    question_content : 'Quy trình lắp đặt mạch điện đèn ống huỳnh quang gồm mấy bước?',
+                    answer_list : [
+                        '2',
+                        '4',
+                        '6',
+                        '8'
+                    ],
+                    answer : 3,
+                    explain : '1.vạch dấu, 2.khoan lỗ, 3.lắp thiết bị điện của bảng điện, 4.nối dây bộ đèn, 5.nối dây mạch điện, 6.kiểm tra'
+                },
+                {
+                    question_content : 'Kiểm tra mạch điện đèn ống huỳnh quang cần thực hiện mấy công việc?',
+                    answer_list : [
+                        '1',
+                        '2',
+                        '3',
+                        '4'
+                    ],
+                    answer : 2,
+                    explain : `1.Kiểm tra sản phẩm có đạt yêu cầu hay không. 2.Nối mạch điện vào nguồn điện và cho vận hành thử`
+                },
+                {
+                    question_content : 'Khi lắp đặt mạch điện đèn ống huỳnh quang cần vẽ mấy loại sơ đồ',
+                    answer_list : [
+                        '1',
+                        '2',
+                        '3',
+                        '4'
+                    ],
+                    answer : 2,
+                    explain : '1. Sơ đồ nguyên lí, 2. Sơ đồ lắp đặt'
+                },
+                {
+                    question_content : 'Theo em, có mấy loại bảng điện?',
+                    answer_list : [
+                        '1',
+                        '2',
+                        '3',
+                        '4'
+                    ],
+                    answer : 2,
+                    explain : `Bảng điện chính và bảng điện phụ`
+                },
+            ]
+        })
+    </script>
+</body>
+</html>
