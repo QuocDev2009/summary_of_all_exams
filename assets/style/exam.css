@@ -77,6 +77,12 @@
     border: 1px solid #ff0000;
     background-color: #eec3c3c4;
 }
+.content__wrong-answer{
+    color: #f00;
+}
+.content__right-answer{
+    color: #71be34;
+}
 .content__required-mess{
     color: #f00;
     background-color: #eec3c3c4;
@@ -111,6 +117,7 @@
 }
 .content__point{
     font-size: 18px;
+    text-align: center;
 }
 .content__answer-explain{
     width: 800px;

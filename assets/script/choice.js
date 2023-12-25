@@ -129,8 +129,6 @@ function choice_question(query){
             }
         })
         if (isChooseAll && isFirst){
-            // check answer
-            var right_answers = 0
             var tableELement = document.querySelector(query.answer_sheet)
             var trElement = tableELement.createTableElement()
             // edit table heading
@@ -141,7 +139,11 @@ function choice_question(query){
             })
             // after submit
             isFirst = false
-            // get table element
+            // check answer
+            var rightAnswerList = []
+            var wrongAnswerList = []
+            var right_answers = 0
+            var index = 0
             answer_element_list.forEach(function(element){
                 var element_choosed = find_element_choosed(element.element)
                 if (element_choosed){
@@ -149,25 +151,49 @@ function choice_question(query){
                     // choose right answer
                     if (parentElementChoosed === element.right){
                         right_answers++
+                        rightAnswerList.push(++index)
                     }
                     // choose wrong answer
                     else{
                         parentElementChoosed.classList.add(query.error_css)
+                        wrongAnswerList.push(++index)
                     }
                     // after submit
                     element.right.classList.add(query.success_css)
                     // show table
                     var trElement = tableELement.createTableElement()
+                    // right or wrong
+                    var answer_css = (element.right === parentElementChoosed)?query.success_css:query.error_css
                     trElement.innerHTML = `
                         <td>${element.index}</td>
-                        <td>${parentElementChoosed.textContent}</td>
-                        <td>${element.right.textContent}</td>
+                        <td class = ${answer_css}>${parentElementChoosed.textContent}</td>
+                        <td class = ${answer_css}>${element.right.textContent}</td>
                         <td class="${query.answer_explain_css}">${element.explain}</td>
                     `
                 }
             })
+            // right wrong handler
+            var rightCountMess = rightAnswerList.join(', ') || 'Không có câu nào đúng'
+            var wrongCountMess = wrongAnswerList.join(', ') || "Không có câu nào sai"
+            var point = right_answers*query.max_point/(query.question_list.length)
             // show point
-            right_ans_count_element.textContent = `Bạn đã làm đúng ${right_answers}/${query.question_list.length} câu`
+            var right_count = document.createElement('p')
+            var wrongAnswerElement = document.createElement('p')
+            var rightAnswerElement = document.createElement('p')
+            var pointELement = document.createElement('p')
+            // add class 
+            rightAnswerElement.classList.add(query.right_css)
+            wrongAnswerElement.classList.add(query.wrong_css)
+            // add textContent
+            rightAnswerElement.textContent = `Các câu bạn đã làm đúng: ${rightCountMess}`
+            wrongAnswerElement.textContent = `Các câu bạn đã làm sai: ${wrongCountMess}`
+            right_count.textContent = `Bạn đã làm đúng ${right_answers}/${query.question_list.length} câu`
+            pointELement.textContent = `Số điểm bạn đạt được: ${point.toFixed(2)}/${query.max_point} Điểm`
+            // add element to right_ans_count_element
+            right_ans_count_element.appendChild(rightAnswerElement)
+            right_ans_count_element.appendChild(wrongAnswerElement)
+            right_ans_count_element.appendChild(pointELement)
+            right_ans_count_element.appendChild(right_count)
             // disable inputs
             input_element_list.forEach(function(input_element){
                 input_element.setAttribute('disabled', true)
