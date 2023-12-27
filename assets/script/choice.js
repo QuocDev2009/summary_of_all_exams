@@ -13,11 +13,6 @@ function choice_question(query){
     function find_element_choosed(node){
         return node.querySelector('input:checked')
     }
-    Element.prototype.createTableElement = function(){
-        var trElement = document.createElement('tr')
-        this.appendChild(trElement)
-        return trElement
-    }
     // assign function
     function gotoUrl(url){
         window.location.assign(url)
