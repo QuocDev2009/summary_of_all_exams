@@ -82,8 +82,6 @@
                                 </div>
                                 <span class="content__point"></span>
                                 <button class="content__submit">Nộp bài trắc nhiệm</button>
-                                <table class="content__answer-sheet">
-                                </table>
                             </ul>
                         </div>
                     </div>
@@ -108,7 +106,6 @@
     <script>
         choice_question({
             form: '.content__list .wrapper',
-            answer_sheet : '.content__answer-sheet',
             answer_sheet__heading : [
                 'Câu hỏi',
                 'bạn đã chọn',
@@ -116,7 +113,6 @@
                 'giải thích'
             ],
             answer_sheet__explain_index : 4,
-            answer_explain_css : 'content__answer-explain',
             submit_selector : '.content__submit',
             rightCount : '.content__point',
             element_class : 'content__items',
@@ -133,6 +129,7 @@
             require_mess_css : 'content__required-mess',
             right_css : 'content__right-answer',
             wrong_css : 'content__wrong-answer',
+            note_css: 'content__note--info',
             max_point : 10,
             question_list : [
                 {

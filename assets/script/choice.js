@@ -18,6 +18,10 @@ function choice_question(query){
         this.appendChild(trElement)
         return trElement
     }
+    // assign function
+    function gotoUrl(url){
+        window.location.assign(url)
+    }
     // mix question
     function mix_question(array){
         var result = []
@@ -36,6 +40,18 @@ function choice_question(query){
     var formElement = document.querySelector(query.form)
     var submitBtn = document.querySelector(query.submit_selector)
     var right_ans_count_element = document.querySelector(query.rightCount)
+    var moveBtn = document.createElement('button')
+    // nav select
+    var navELement = document.createElement('select')
+    // add class
+    if (query.nav_question_select_css){
+        navELement.classList.add(query.nav_question_select_css)
+    }
+    if (query.moveBtn_css){
+        moveBtn.classList.add(query.moveBtn_css)
+    }
+    // add content
+    moveBtn.textContent = query.moveBtn_content
     var answer_element_list = []
     var input_element_list = []
     Array.from(query.question_list).forEach(function(question){
@@ -46,6 +62,9 @@ function choice_question(query){
         var question_content_element = document.createElement('span')
         var answer_list_element = document.createElement('ul')
         var required_mess_element = document.createElement('span')
+        var note_element = document.createElement('span')
+        // random seed
+        var seed = random_seed()
         // answer handler
         if (typeof question.answer === 'number') question.answer = question.answer_list[question.answer-1]
         // add class
@@ -55,12 +74,19 @@ function choice_question(query){
         question_box.classList.add(query.question_box)
         answer_list_element.classList.add(query.answer_list_css)
         required_mess_element.classList.add(query.require_mess_css)
+        if (query.note_css){
+            note_element.classList.add(query.note_css)
+        }
         // add content 
         index_element.textContent = question.index
         question_content_element.textContent = question.question_content
         required_mess_element.textContent = query.require_mess
+        note_element.textContent = "Giải thích: " + (question.explain || "Tạm thời chưa có giải thích")
+        // set attribute
+        question_element.id = seed
         // add style
         required_mess_element.style.display = 'none'
+        note_element.style.display = 'none'
         // add answer item
         var count = 0
         var rightElement
@@ -112,9 +138,11 @@ function choice_question(query){
             required : required_mess_element,
             explain : question.explain || 'Tạm thời chưa có lời giải',
             index : question.index,
+            note : note_element
         })
         question_element.appendChild(answer_list_element)
         question_element.appendChild(required_mess_element)
+        question_element.appendChild(note_element)
     })
     // submit answer
     var isFirst = true
@@ -129,14 +157,6 @@ function choice_question(query){
             }
         })
         if (isChooseAll && isFirst){
-            var tableELement = document.querySelector(query.answer_sheet)
-            var trElement = tableELement.createTableElement()
-            // edit table heading
-            query.answer_sheet__heading.forEach(function(value){
-                var thElement = document.createElement('th')
-                thElement.textContent = value
-                trElement.appendChild(thElement)
-            })
             // after submit
             isFirst = false
             // check answer
@@ -160,16 +180,7 @@ function choice_question(query){
                     }
                     // after submit
                     element.right.classList.add(query.success_css)
-                    // show table
-                    var trElement = tableELement.createTableElement()
-                    // right or wrong
-                    var answer_css = (element.right === parentElementChoosed)?query.success_css:query.error_css
-                    trElement.innerHTML = `
-                        <td>${element.index}</td>
-                        <td class = ${answer_css}>${parentElementChoosed.textContent}</td>
-                        <td class = ${answer_css}>${element.right.textContent}</td>
-                        <td class="${query.answer_explain_css}">${element.explain}</td>
-                    `
+                    element.note.style.display = 'inline-block'
                 }
             })
             // right wrong handler

@@ -132,3 +132,12 @@
     text-transform: uppercase;
     padding: 10px;
 }
+.content__note--info{
+    color: #2b349f;
+    background-color: #c3eeeac4;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #1e2199;
+    display: inline-block;
+    line-height: 1.6;
+}
