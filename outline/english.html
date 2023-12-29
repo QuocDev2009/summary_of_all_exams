@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đề cương ôn tập môn Tiếng Anh</title>
+    <link rel="stylesheet" href="../assets/style/style.css">
+    <link rel="stylesheet" href="../assets/style/base.css">
+    <link rel="stylesheet" href="../assets/fonts/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="../assets/style/exam.css">
+    <link rel="stylesheet" href="../assets/style/reponsive.css">
+    <link rel="icon" href="../assets/img/web_icon.jpg">
+</head>
+<body>
+    <div class="main">
+        <div class="header">
+            <div class="grid">
+                <h1 class="header__heading">Đề cương ôn tập môn Tiếng Anh</h1>
+                <h2 class="header__desc isRequired">Đây là đề cương ôn tập môn Tiếng Anh</h2>
+                <div class="header__bot">
+                    <ul class="header__list">
+                        <li class="header__list-items" onclick="showModal('.modal','button.modal__closeBtn', '.modal__heading', '.modal__content','Thông tin về tác giả', [
+                            'Tên tác giả: Thủy Ngọc Quốc',
+                            'Sinh ngày: 12/9/2009',
+                            'Hiện tại đang là học sinh lớp 9/3 tại trường THCS Huỳnh Thúc Kháng',
+                            'Thường trú: Xã Bình Phục, Huyện Thăng Bình, Tỉnh Quảng Nam',
+                            'Là 1 người rất đam mê công việc lập trình và tôi đã quyết định tạo web này'
+                    ])">
+                            <span class="header__list-items-text">
+                                Thông tin tác giả
+                            </span>
+                            <i class="header__list-items-icon ti-user"></i>
+                        </li>
+                        <li class="header__list-items" onclick="showModal('.modal','button.modal__closeBtn', '.modal__heading', '.modal__content','Web của tôi có gì?', [
+                        'Nó có những đề cương ôn tập từ nhiều nguồn gửi về',
+                        'Có những bộ đề thực tế qua các kì thi trước đó',
+                        'Có bộ máy chấm trắc nhiệm tự động cùng với đó là kết quả của các bài tự luận'
+                ])">
+                            <span class="header__list-items-text">
+                                Web của tôi có gì?
+                            </span>
+                            <i class="header__list-items-icon ti-info"></i>
+                        </li>
+                    </ul>
+                    <ul class="header__list">
+                        
+                        <li class="header__list-items" onclick="showModal('.modal','button.modal__closeBtn', '.modal__heading', '.modal__content','Thông tin về lộ trình luyện tập', [
+                        'Sắp tới tầm 1 đến 2 tuần nx sẽ là cuộc thi cuối học kì 1',
+                        'Để giúp mọi người có công cụ hỗ trợ ôn tập hiệu quả tôi đã quyết định tạo ra trang web này'
+                ])">
+                            <span class="header__list-items-text">
+                                Lí do tạo web
+                            </span>
+                            <i class="header__list-items-icon ti-world"></i>
+                        </li>
+                        <li class="header__list-items">
+                            <a href="../index.html" class="header__list-items-text">
+                                Trang chủ
+                            </a>
+                            <a href="../index.html">
+                                <i class="header__list-items-icon ti-home"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="grid">
+                <h1 class="heading">NỘI DUNG ÔN TẬP CUỐI KỲ I MÔN TIẾNG ANH 9 - NĂM HỌC 2023-2024</h1>
+                <div class="content">
+                    
+                    <div class="content__indexing">
+                        <b class="content__order">A / </b>
+                        <h2 class="content__section-name">Phần bài tập</h2>
+                        <div class="content__indexing">
+                            <b class="content__order">I / </b>
+                            <h2 class="content__section-name">Choose the letter A, B, C or D next to the word whose underline part is pronounced differently from that of the others</h2>
+                            <ul class="content__list">
+                                <div class="wrapper">
+                                   
+                                </div>
+                            </ul>
+                            <span class="content__point"></span>
+                            <button class="content__submit">Nộp bài trắc nhiệm</button>
+                        </div>
+                    </div>
+                    <button class="download-doc-btn"><a href="./document/english.docx" download="">Tải xuống tài liệu</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal">
+        <div class="modal__container modal__text">
+            <div class="modal__heading"></div>
+            <div class="modal__content">
+            </div>
+            <div class="modal__bottom">
+                <button class="modal__closeBtn">Đã hiểu</button>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/script/modal.js"></script>
+    <script src="../assets/script/choice.js"></script>
+    <script>
+        checkAnswer({
+            submit_selector : '.content__submit',
+            rightCount : '.content__point',
+            success_css : 'content__answer--success',
+            error_css : 'content__answer--error',
+        })
+        choice_question({
+            form: '.content__list .wrapper',
+            answer_sheet__heading : [
+                'Câu hỏi',
+                'bạn đã chọn',
+                'đáp án đúng',
+                'giải thích'
+            ],
+            answer_sheet__explain_index : 4,
+            submit_selector : '.content__submit',
+            rightCount : '.content__point',
+            element_class : 'content__items',
+            question_box : 'content__question',
+            question_index_css : 'content__question-indexing',
+            question_content_css : 'content__question-content',
+            answer_box : 'content__answers-items',
+            answer_index_css: 'content__answers-indexing',
+            answer_content_css : 'content__answers-content',
+            answer_list_css : 'content__answers-list',
+            success_css : 'content__answer--success',
+            error_css : 'content__answer--error',
+            require_mess : 'Vui lòng trả lời câu hỏi này',
+            require_mess_css : 'content__required-mess',
+            right_css : 'content__right-answer',
+            wrong_css : 'content__wrong-answer',
+            note_css: 'content__note--info',
+            max_point : 10,
+            question_list : [
+                {
+                    answer_list : [
+                        'T<span class = "underline">oo</span>k',
+                        'Sch<span class = "underline">oo</span>l',
+                        'F<span class = "underline">oo</span>d',
+                        'Ch<span class = "underline">oo</span>se',
+                    ],
+                    answer : 1,
+                    explain : ''
+                },
+                {
+                    answer_list : [
+                        'Cloth<span class = "underline">ed</span>',
+                        'Impress<span class = "underline">ed</span>',
+                        'Enjoy<span class = "underline">ed</span>',
+                        'Worked<span class = "underline">ed</span>',
+                    ],
+                    answer : 3,
+                    explain : ''
+                },
+                {
+                    answer_list : [
+                        'Pl<span class = "underline">ea</span>se',
+                        'Pl<span class = "underline">ea</span>sure',
+                        '<span class = "underline">Ea</span>sy',
+                        'T<span class = "underline">ea</span>cher',
+                    ],
+                    answer : 2,
+                    explain : ''
+                },
+                {
+                    answer_list : [
+                        'Compr<span class = "underline">i</span>se',
+                        'Div<span class = "underline">i</span>de',
+                        'Pr<span class = "underline">i</span>mary',
+                        'Rel<span class = "underline">i</span>gion',
+                    ],
+                    answer : 4,
+                    explain : ''
+                },
+                {
+                    answer_list : [
+                        'j<span class = "underline">ea</span>n',
+                        'ch<span class = "underline">ea</span>p',
+                        'r<span class = "underline">ea</span>son',
+                        'w<span class = "underline">ea</span>r',
+                    ],
+                    answer : 4,
+                    explain : ''
+                },
+                {
+                    answer_list : [
+                        'Regard<span class = "underline">ed</span>',
+                        'Exchang<span class = "underline">ed</span>',
+                        'Remain<span class = "underline">ed</span>',
+                        'Gather<span class = "underline">ed</span>',
+                    ],
+                    answer : 1,
+                    explain : ''
+                },
+                {
+                    answer_list : [
+                        't<span class = "underline">i</span>cket',
+                        'inv<span class = "underline">i</span>te',
+                        'Rel<span class = "underline">i</span>gion',
+                        'Off<span class = "underline">i</span>cial',
+                    ],
+                    answer : 2,
+                    explain : ''
+                },
+                {
+                    answer_list : [
+                        'Hop<span class = "underline">ed</span>',
+                        'Impress<span class = "underline">ed</span>',
+                        'Walk<span class = "underline">ed</span>',
+                        'Play<span class = "underline">ed</span>',
+                    ],
+                    answer : 4,
+                    explain : ''
+                },
+                {
+                    answer_list : [
+                        'Cloth<span class = "underline">ed</span>',
+                        'Impress<span class = "underline">ed</span>',
+                        'Enjoy<span class = "underline">ed</span>',
+                        '<span class = "underline">ed</span>',
+                    ],
+                    answer : 3,
+                    explain : ''
+                },
+                {
+                    answer_list : [
+                        'Cloth<span class = "underline">ed</span>',
+                        'Impress<span class = "underline">ed</span>',
+                        'Enjoy<span class = "underline">ed</span>',
+                        '<span class = "underline">ed</span>',
+                    ],
+                    answer : 3,
+                    explain : ''
+                },
+            ]
+        })
+    </script>
+</body>
+</html>

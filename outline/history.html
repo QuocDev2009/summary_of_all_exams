@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đề cương ôn tập môn Lịch Sử</title>
+    <link rel="stylesheet" href="../assets/style/style.css">
+    <link rel="stylesheet" href="../assets/style/base.css">
+    <link rel="stylesheet" href="../assets/fonts/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="../assets/style/exam.css">
+    <link rel="stylesheet" href="../assets/style/reponsive.css">
+    <link rel="icon" href="../assets/img/web_icon.jpg">
+</head>
+<body>
+    <div class="main">
+        <div class="header">
+            <div class="grid">
+                <h1 class="header__heading">Đề cương ôn tập môn Lịch Sử</h1>
+                <h2 class="header__desc isRequired">Đây là đề cương ôn tập môn Lịch Sử</h2>
+                <div class="header__bot">
+                    <ul class="header__list">
+                        <li class="header__list-items" onclick="showModal('.modal','button.modal__closeBtn', '.modal__heading', '.modal__content','Thông tin về tác giả', [
+                            'Tên tác giả: Thủy Ngọc Quốc',
+                            'Sinh ngày: 12/9/2009',
+                            'Hiện tại đang là học sinh lớp 9/3 tại trường THCS Huỳnh Thúc Kháng',
+                            'Thường trú: Xã Bình Phục, Huyện Thăng Bình, Tỉnh Quảng Nam',
+                            'Là 1 người rất đam mê công việc lập trình và tôi đã quyết định tạo web này'
+                    ])">
+                            <span class="header__list-items-text">
+                                Thông tin tác giả
+                            </span>
+                            <i class="header__list-items-icon ti-user"></i>
+                        </li>
+                        <li class="header__list-items" onclick="showModal('.modal','button.modal__closeBtn', '.modal__heading', '.modal__content','Web của tôi có gì?', [
+                        'Nó có những đề cương ôn tập từ nhiều nguồn gửi về',
+                        'Có những bộ đề thực tế qua các kì thi trước đó',
+                        'Có bộ máy chấm trắc nhiệm tự động cùng với đó là kết quả của các bài tự luận'
+                ])">
+                            <span class="header__list-items-text">
+                                Web của tôi có gì?
+                            </span>
+                            <i class="header__list-items-icon ti-info"></i>
+                        </li>
+                    </ul>
+                    <ul class="header__list">
+                        
+                        <li class="header__list-items" onclick="showModal('.modal','button.modal__closeBtn', '.modal__heading', '.modal__content','Thông tin về lộ trình luyện tập', [
+                        'Sắp tới tầm 1 đến 2 tuần nx sẽ là cuộc thi cuối học kì 1',
+                        'Để giúp mọi người có công cụ hỗ trợ ôn tập hiệu quả tôi đã quyết định tạo ra trang web này'
+                ])">
+                            <span class="header__list-items-text">
+                                Lí do tạo web
+                            </span>
+                            <i class="header__list-items-icon ti-world"></i>
+                        </li>
+                        <li class="header__list-items">
+                            <a href="../index.html" class="header__list-items-text">
+                                Trang chủ
+                            </a>
+                            <a href="../index.html">
+                                <i class="header__list-items-icon ti-home"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="grid">
+                <h1 class="heading">NỘI DUNG ÔN TẬP CUỐI KỲ I MÔN Lịch Sử 9 - NĂM HỌC 2023-2024</h1>
+                <div class="content">
+                    
+                    <div class="content__indexing">
+                        <b class="content__order">I / </b>
+                        <h2 class="content__section-name">Phần bài tập</h2>
+                        <div class="content__indexing">
+                            <b class="content__order">1 / </b>
+                            <h2 class="content__section-name">Phần trắc nhiệm</h2>
+                            <ul class="content__list">
+                                <div class="wrapper">
+                                   
+                                </div>
+                                <span class="content__point"></span>
+                                <button class="content__submit">Nộp bài trắc nhiệm</button>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal">
+        <div class="modal__container modal__text">
+            <div class="modal__heading"></div>
+            <div class="modal__content">
+            </div>
+            <div class="modal__bottom">
+                <button class="modal__closeBtn">Đã hiểu</button>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/script/modal.js"></script>
+    <script src="../assets/script/choice.js"></script>
+    <script>
+        checkAnswer({
+            submit_selector : '.content__submit',
+            rightCount : '.content__point',
+            success_css : 'content__answer--success',
+            error_css : 'content__answer--error',
+        })
+        choice_question({
+            form: '.content__list .wrapper',
+            element_class : 'content__items',
+            question_box : 'content__question',
+            question_index_css : 'content__question-indexing',
+            question_content_css : 'content__question-content',
+            answer_box : 'content__answers-items',
+            answer_index_css: 'content__answers-indexing',
+            answer_content_css : 'content__answers-content',
+            answer_list_css : 'content__answers-list',
+            require_mess : 'Vui lòng trả lời câu hỏi này',
+            require_mess_css : 'content__required-mess',
+            note_css: 'content__note--info',
+            max_point : 10,
+            question_list : [
+                {
+                    question_content : 'Chiến lược phát triển kinh tế của Liên Xô sau chiến tranh thế giới thứ chủ trọng vào: ',
+                    answer_list : [
+                        'Công nghiệp nhẹ',
+                        'Công nghiệp truyền thống',
+                        'Công - nông - thương nghiệp',
+                        'Công nghiệp nặng'
+                    ],
+                    answer : 4,
+                    explain : 'Trong kế hoạch khôi phục kinh tế, từ năm 50 đến những năm 70 của thế kỷ XX, Liên Xô nhận thấy vai trò quan trọng của Công nghiệp nặng nên đã lấy phát triển công nghiệp nặng làm trọng tâm'
+                },
+                {
+                    question_content : 'Nhà du hành vũ trụ Ga-ga-rin là ai?',
+                    answer_list : [
+                        'Người đầu tiên bay lên Sao hỏa',
+                        'Người đầu tiên phóng vệ tinh nhân tạo',
+                        'Người đầu tiên bay vào vũ trụ',
+                        'Người đầu tiên đặt chân lên Mặt Trăng'
+                    ],
+                    answer : 3,
+                    explain : 'Ga-ga-rin được ghi nhận là người đầu tiên trong lịch sử nhân loại thực hiện chuyến bay vào vũ trụ, ngày 12 tháng 4 năm 1961 trên tàu vũ trụ Phương Đông 1 (Vostok 1). Phi hành gia M.O.M.'
+                },
+                {
+                    question_content : 'Năm 1960 đã đi vào lịch sử với tên gọi là "Năm châu Phi", vì sao?',
+                    answer_list : [
+                        'Có nhiều nước ở châu Phi được trao trả độc lập',
+                        'Châu Phi là châu có phong trào giải phóng dân tộc phát triển sớm nhất',
+                        'Có 17 nước ở châu Phi tuyên bố độc lập',
+                        'Châu Phi là "Lục địa bùng cháy"'
+                    ],
+                    answer : 3,
+                    explain : 'Vì có 17 nước ở Châu Phi được trao trả độc lập.'
+                },
+                {
+                    question_content : 'Từ cuối những năm 70 của thế kỉ XX, chủ nghĩa thực dân chỉ còn tồn tại dưới hình thức nào?',
+                    answer_list : [
+                        'Chủ nghĩa thực dân kiểu cũ.',
+                        'Chủ nghĩa thực dân kiểu mới',
+                        'Chế độ phân biệt chủng tộc',
+                        'Chế độ thực dân'
+                    ],
+                    answer : 3,
+                    explain : 'Từ cuối những năm 70 của thế kỉ XX, chủ nghĩa thực dân chỉ còn tồn tại dưới hình thức chế độ phân biệt chủng tộc'
+                },
+                {
+                    question_content : 'Châu lục đi đầu trong phong trào giải phóng dân tộc sau chiến tranh thế giới thứ 2?',
+                    answer_list : [
+                        'Châu Á',
+                        'Châu Phi',
+                        'Châu Mĩ La tinh',
+                        'Châu Âu'
+                    ],
+                    answer : 1,
+                    explain : 'Châu Á là châu lục đi đầu trong phong trào giải phóng dân tộc sau chiến tranh thế giới thứ 2?'
+                },
+                {
+                    question_content : 'Những nước nào ở Đông Nam Á giành được độc lập trong năm 1945?',
+                    answer_list : [
+                        'Việt Nam, Lào, In-đô-nê-xi-a',
+                        'Việt Nam, In-đô-nê-xi-a',
+                        'Lào, In-đô-nê-xi-a, Phi-lip-pin',
+                        'Việt Nam, Lào, Cam-pu-chia'
+                    ],
+                    answer : 1,
+                    explain : 'Việt Nam, Lào, In-đô-nê-xi-a là những nước ở Đông Nam Á giành được độc lập trong năm 1945?'
+                },
+                {
+                    question_content : 'Tội ác lớn nhất của chế độ phân biệt chủng tộc A-pác-thai ở Nam Phi là: ',
+                    answer_list : [
+                        'Bóc lột tàn bạo người da đen',
+                        'Gây chia rẽ nội bộ Nam Phi',
+                        'Tước quyền tự do của người da đen',
+                        'Phân biệt chủng tộc và kì thị chủng tộc đối với người da đen'
+                    ],
+                    answer : 4,
+                    explain : 'Tội ác lớn nhất của chế độ phân biệt chủng tộc A-pác-thai ở Nam Phi là: phân biệt chủng tộc và kì thị chủng tộc đối với người da đen'
+                },
+                {
+                    question_content : 'Phong trào giải phóng dân tộc ở Mĩ La-tinh sau Chiến tranh thế giới thứ 2 được mệnh danh là gì?',
+                    answer_list : [
+                        '"Đại lục mới trỗi dậy"',
+                        '"Đại lục bùng cháy"',
+                        'Đại lục có phong trào giải phóng dân tộc phát triển nhất',
+                        '"Đại lục mới trỗi dậy" và "Đại lục bùng cháy"'
+                    ],
+                    answer : 2,
+                    explain : 'Phong trào giải phóng dân tộc ở Mĩ La-tinh sau Chiến tranh thế giới thứ 2 được mệnh danh là: "Đại lục bùng cháy"'
+                },
+                {
+                    question_content : 'Quốc gia nào được coi như "ngọn cờ đầu" trong phong trào giải phóng dân tộc ở khu vực Mĩ La-tinh?',
+                    answer_list : [
+                        'Chi-lê',
+                        'Ni-ca-ra-goa',
+                        'Bô-li-vi-a',
+                        'cu-ba'
+                    ],
+                    answer : 4,
+                    explain : 'Cu-ba được coi như "ngọn cờ đầu" trong phong trào giải phóng dân tộc ở khu vực Mĩ La-tinh'
+                },
+                {
+                    question_content : 'Nước nào khởi đầu cuộc cách mạng khoa học - kĩ thuật lần thứ 2?',
+                    answer_list : [
+                        'Anh',
+                        'Pháp',
+                        'Mĩ',
+                        'Nhật'
+                    ],
+                    answer : 3,
+                    explain : 'Mĩ là nước khởi đầu cuộc cách mạng khoa học - kĩ thuật lần thứ 2'
+                },
+                {
+                    question_content : 'Khoảng 20 năm sau Chiến tranh thế giới thứ 2, Mĩ trở thành',
+                    answer_list : [
+                        'Trung tâm kinh tế - tài chính lớn nhất thế giới',
+                        'Nước đầu tiên phóng thành công vệ tinh nhân tạo',
+                        'Một trong ba trung tâm kinh tế - tài chính lớn của thế giới',
+                        'Trung tâm kinh tế thứ 2 thế giới'
+                    ],
+                    answer : 1,
+                    explain : 'Khoảng 20 năm sau Chiến tranh thế giới thứ 2, Mĩ trở thành trung tâm kinh tế - tài chính lớn nhất thế giới'
+                },
+                {
+                    question_content : 'Ý nghĩa then chốt, quan trọng nhất của cách mạng khoa học- kĩ thuật lần thứ hai?',
+                    answer_list : [
+                        'Tạo ra một khối lượng hàng hoá đồ sộ.',
+                        'Đưa loài người chuyển sang nền văn minh trí tuệ.',
+                        'Thay đổi một cách cơ bản các nhân tố sản xuất.',
+                        'Sự giao lưu quốc tế ngày càng được mở rộng.'
+                    ],
+                    answer : 3,
+                    explain : 'Ý nghĩa then chốt, quan trọng nhất của cách mạng khoa học- kĩ thuật lần thứ hai là: thay đổi một cách cơ bản các nhân tố sản xuất.'
+                },
+                {
+                    question_content : 'Từ 1979 đến cuối những năm 80 của thế kì XX quan hệ giữa Việt Nam với ASEAN là gì?',
+                    answer_list : [
+                        'Quan hệ hợp tác song phương.',
+                        'Quan hệ đối thoại.',
+                        'Quan hệ đối đầu do bất đồng về quan hệ kinh tế.',
+                        'Quan hệ đối đầu do vấn đề Cam-pu-chia.'
+                    ],
+                    answer : 4,
+                    explain : 'Từ 1979 đến cuối những năm 80 của thế kì XX quan hệ giữa Việt Nam với ASEAN là: Quan hệ đối đầu do vấn đề Cam-pu-chia.'
+                },
+                {
+                    question_content : 'Những năm 1967-1969, sản lượng lương thực của Nhật cung cấp:',
+                    answer_list : [
+                        '80% nhu cầu trong nước.',
+                        '70% nhu cầu trong nước.',
+                        '60% nhu cầu trong nước.',
+                        '50% nhu cầu trong nước.'
+                    ],
+                    answer : 1,
+                    explain : 'Những năm 1967-1969, sản lượng lương thực của Nhật cung cấp là: 80% nhu cầu trong nước.'
+                },
+                {
+                    question_content : 'Chỗ dựa chủ yếu của công cuộc xây dựng chủ nghĩa xã hội ở các nước Đông Âu là:',
+                    answer_list : [
+                        'Thành quả của cách mạng dân chủ nhân dân (1946 -1949) và nhiệt tình của nhân dân.',
+                        'Sự hoạt động và hợp tác của Hội đồng Tương trợ Kinh tế (SEV).',
+                        'Sự giúp đỡ của Liên Xô.',
+                        'Sự hợp tác giữa các nước Đông Âu.'
+                    ],
+                    answer : 1,
+                    explain : 'Chỗ dựa chủ yếu của công cuộc xây dựng chủ nghĩa xã hội ở các nước Đông Âu là: Thành quả của cách mạng dân chủ nhân dân (1946 -1949) và nhiệt tình của nhân dân.'
+                },
+                {
+                    question_content : 'Giai đoạn lịch sử từ sau 1991 đến nay được gọi là thời kì:',
+                    answer_list : [
+                        'Sau "Chiến tranh lạnh", một trật tự thế giới đa cực, nhiều trung tâm.',
+                        'Một trật tự thế giới hai cực Xô-Mĩ.',
+                        'Một trật tự thế giới đơn cực.',
+                        'A, B đúng.'
+                    ],
+                    answer : 1,
+                    explain : 'Giai đoạn lịch sử từ sau 1991 đến nay được gọi là thời kì: Sau "Chiến tranh lạnh", một trật tự thế giới đa cực, nhiều trung tâm.'
+                },
+                {
+                    question_content : 'Kế hoạch 5 năm lần thứ nhất của Trung Quốc tiến hành trong khoảng thời gian nào?',
+                    answer_list : [
+                        '1949-1953',
+                        '1953-1957',
+                        '1957-1961',
+                        '1961-1965'
+                    ],
+                    answer : 3,
+                    explain : 'Kế hoạch 5 năm lần thứ nhất của Trung Quốc tiến hành trong khoảng thời gian từ 1957 - 1961'
+                },
+                {
+                    question_content : 'Nội dung "Chiến lược toàn cầu" của Mĩ nhằm mục tiêu cơ bản nào?',
+                    answer_list : [
+                        'Ngăn chặn, đẩy lùi rồi tiến tới tiêu diệt các nước xã hội chủ nghĩa.',
+                        'Đàn áp phong trào giải phóng dân tộc, khống chế các nước đồng minh của Mĩ.',
+                        'Thiết lập sự thống trị trên toàn thế giới.',
+                        'A, B, C đúng.'
+                    ],
+                    answer : 3,
+                    explain : ''
+                },
+                {
+                    question_content : 'Đến năm 1999 số nước thành viên của Liên minh châu Âu là:',
+                    answer_list : [
+                        '14 nước',
+                        '15 nước',
+                        '16 nước',
+                        '17 nước',
+                    ],
+                    answer : 2,
+                    explain : 'Đến năm 1999 số nước thành viên của Liên minh châu Âu là: 15 nước'
+                },
+                {
+                    question_content : 'Cuộc đấu tranh của giai cấp công nhân Việt Nam thời kỳ này còn lẻ tẻ, tự phát nhưng ý thức giai cấp phát triển nhanh chóng. Đó là đặc điểm của phong trào công nhân Việt Nam thời kỳ nào?',
+                    answer_list : [
+                        '1919-1924.',
+                        '1919-1925.',
+                        '1919-1926.',
+                        '1919-1927.'
+                    ],
+                    answer : 2,
+                    explain : ''
+                },
+                {
+                    question_content : 'Kẻ thù chủ yếu của nhân dân các nước Mĩ La-tinh là ai?',
+                    answer_list : [
+                        'Chế độ phân biệt chủng tộc.',
+                        'Chủ nghĩa thực dân cũ.',
+                        'Chế độ tay sai phản động của chủ nghĩa thực dân mới.',
+                        'Giai cấp địa chủ phong kiến.'
+                    ],
+                    answer : 3,
+                    explain : 'Kẻ thù chủ yếu của nhân dân các nước Mĩ La-tinh là: Chế độ tay sai phản động của chủ nghĩa thực dân mới.'
+                },
+                {
+                    question_content : 'Trong chính sách thương nghiệp, Pháp đã đánh thuế nặng các hàng hóa nước ngoài vì:',
+                    answer_list : [
+                        'Tạo sự cạnh tranh giữa hàng hóa các nước nhập vào Đông Dương.',
+                        'Cản trở sự xâm nhập của hàng hóa nước ngoài.',
+                        'Muốn độc quyền chiếm thị trường Việt Nam và Đông Dương.',
+                        'Tạo điều kiện cho thương nghiệp Đông Dương phát triển.'
+                    ],
+                    answer : 3,
+                    explain : 'Trong chính sách thương nghiệp, Pháp đã đánh thuế nặng các hàng hóa nước ngoài vì: Muốn độc quyền chiếm thị trường Việt Nam và Đông Dương.'
+                },
+                {
+                    question_content : 'Biến đổi lớn nhất của các nước châu Á sau Chiến tranh thế giới thứ hai là gì?',
+                    answer_list : [
+                        'Các nước châu Á đã giành độc lập.',
+                        'Các nước châu Á đã gia nhập ASEAN.',
+                        'Các nước châu Á đã trở thanh trung tâm kinh tế tài chính thể giới.',
+                        'Tất cả ý trên'
+                    ],
+                    answer : 1,
+                    explain : ''
+                },
+                {
+                    question_content : 'Việt Nam gia nhập tổ chức Liên Hợp Quốc vào thời gian nào?',
+                    answer_list : [
+                        '8/1977',
+                        '9/1977',
+                        '1/1987',
+                        '11/1987'
+                    ],
+                    answer : 2,
+                    explain : 'Việt Nam gia nhập tổ chức Liên Hợp Quốc vào: 9/1977'
+                },
+                {
+                    question_content : 'Những phong trào quốc tế nào đã có vai trò tích cực trong các mối quan hệ quốc tế sau Chiến tranh thế giới thứ hai?',
+                    answer_list : [
+                        'Phong trào giải phóng dân tộc.',
+                        'Phong trào bảo vệ hòa bình thế giới.',
+                        'Phong trào không liên kết.',
+                        'A, B, C đúng.'
+                    ],
+                    answer : 4,
+                    explain : ''
+                },
+                {
+                    question_content : 'Nguyên nhân cơ bản nào làm cho chủ nghĩa xã hội ở Liên Xô và Đông Âu sụp đổ?',
+                    answer_list : [
+                        'Các thế lực chống CNXH trong và ngoài nước chống phá.',
+                        'Chậm sửa chữa những sai lầm.',
+                        'Nhà nước nhân dân Xô viết, nhận thấy CNXH không tiến bộ nên muốn thay đổi chế độ.',
+                        'Xây dựng mô hình chủ nghĩa xã hội không phù hợp.'
+                    ],
+                    answer : 4,
+                    explain : ''
+                },
+                {
+                    question_content : 'Hiệp ước an ninh Mĩ-Nhật được kí kết nhằm mục đích gì?',
+                    answer_list : [
+                        'Hình thành một liên minh Mĩ-Nhật chống lại các nước XHCN và phong trào giải phóng dân tộc vùng Viễn Đông.',
+                        'Nhật Bản trở thành căn cứ chiến lược của Mĩ.',
+                        'Nhật Bản muốn lợi dụng vốn kĩ thuật của Mĩ để phát triển kinh tế.',
+                        'Tạo thế cân bằng giữa Mĩ và Nhật.'
+                    ],
+                    answer : 1,
+                    explain : 'Hiệp ước an ninh Mĩ-Nhật được kí kết nhằm mục đích: Hình thành một liên minh Mĩ-Nhật chống lại các nước XHCN và phong trào giải phóng dân tộc vùng Viễn Đông.'
+                },
+                {
+                    question_content : ' Ai Cập tuyên bố thành lập nước Cộng hòa Ai Cập vào năm nào?',
+                    answer_list : [
+                        '1951',
+                        '1952',
+                        '1953',
+                        '1954'
+                    ],
+                    answer : 3,
+                    explain : 'Ai Cập tuyên bố thành lập nước Cộng hòa Ai Cập vào năm 1953'
+                },
+                {
+                    question_content : 'Cộng hòa Dân chủ Đức sát nhập vào CHLB Đức vào thời gian nào?',
+                    answer_list : [
+                        '03/09/1990.',
+                        '03/10/1990.',
+                        '03/11/1990.',
+                        '03/12/1990.'
+                    ],
+                    answer : 2,
+                    explain : ''
+                },
+                {
+                    question_content : 'Tổ chức Hiệp ước Phòng thủ Vác- sa-va mang tính chất:',
+                    answer_list : [
+                        'Một tổ chức kinh tế của các nước XHCN ở châu Âu',
+                        'Một tổ chức liên minh phòng thủ về quân sự của các nước XHCN ở châu Âu.',
+                        'Một tô chức liên minh chính trị của các nước XHCN ở châu Âu.',
+                        'Một tổ chức liên minh phòng thủ về chính trị và quân sự của các nước XHCN ở châu Âu.'
+                    ],
+                    answer : 4,
+                    explain : ''
+                },
+                {
+                    question_content : 'Theo sự thỏa thuận của Hội nghị cấp cao Anh, Mĩ, Liên Xô tại I- an-ta (từ 4-12/4/1945), Việt Nam thuộc phạm vi ảnh hưởng của nước nào?.',
+                    answer_list : [
+                        'Các nước phương Tây',
+                        'Pháp',
+                        'Liên Xô',
+                        'Mĩ'
+                    ],
+                    answer : 1,
+                    explain : ''
+                },
+                {
+                    question_content : 'Giữa những năm 50 của thế kỉ XX, tình hình Đông Nam Á diễn ra như thế nào?',
+                    answer_list : [
+                        'Ngày càng trở nên căng thẳng.',
+                        'Ngày càng phát triển phồn thịnh.',
+                        'Ổn định.',
+                        'Ổn định và phát triển'
+                    ],
+                    answer : 1,
+                    explain : ''
+                },
+                {
+                    question_content : 'Nguyên nhân nào không tạo điều kiện cho nền kinh tế Mĩ phát triển trong và sau Chiến tranh thế giới thứ hai?',
+                    answer_list : [
+                        'Không bị chiến tranh tàn phá.',
+                        'Được yên ổn sản xuất và bán vũ khí cho các nước tham chiến.',
+                        'Tập trung sản xuất và tư bản cao.',
+                        'Tiến hành chiến tranh xâm lược vả nô dịch các nước.'
+                    ],
+                    answer : 4,
+                    explain : ''
+                },
+                {
+                    question_content : 'Thành tựu nào quan trọng nhất mà Liên Xô đạt được sau chiến tranh?',
+                    answer_list : [
+                        'Năm 1949, Liên Xô chế tạo thành công bom nguyên tử.',
+                        'Năm 1957, Liên Xô là nước đầu tiên phóng thành công vệ tinh nhân tạo của trái đất.',
+                        'Năm 1961, Liên Xô là nước đầu tiên phóng thành công tàu vũ trụ có người lái.',
+                        'Đến thập kỉ 60 (thế kỉ XX), Liên Xô trở thành cường quốc công nghiệp đứng thứ hai trên thế giới (sau Mĩ).'
+                    ],
+                    answer : 4,
+                    explain : ''
+                },
+                {
+                    question_content : 'Từ những năm 60 của thế kỉ XX đến nay, Mĩ đã thực hiện chính sách cấm vận kinh tế đối với nước nào?',
+                    answer_list : [
+                        'Mê-hi-cô',
+                        'Cu Ba',
+                        'Chi-lê',
+                        'Vê-nê-du-ê-la'
+                    ],
+                    answer : 2,
+                    explain : ''
+                },
+            ]
+        })
+        
+    </script>
+</body>
+</html>

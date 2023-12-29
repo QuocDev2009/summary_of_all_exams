@@ -1,3 +1,7 @@
+var answer_element_list = []
+var input_element_list = []
+var question_quantity = 0
+var max_point = 0
 function choice_question(query){
     var ids = {}
     // random seed function
@@ -10,9 +14,7 @@ function choice_question(query){
         ids[seed] = true
         return seed
     }
-    function find_element_choosed(node){
-        return node.querySelector('input:checked')
-    }
+    
     // assign function
     function gotoUrl(url){
         window.location.assign(url)
@@ -33,8 +35,8 @@ function choice_question(query){
     query.question_list = mix_question(query.question_list)
     // select element
     var formElement = document.querySelector(query.form)
-    var submitBtn = document.querySelector(query.submit_selector)
-    var right_ans_count_element = document.querySelector(query.rightCount)
+    question_quantity += query.question_list.length
+    max_point += query.max_point
     var moveBtn = document.createElement('button')
     // nav select
     var navELement = document.createElement('select')
@@ -47,8 +49,6 @@ function choice_question(query){
     }
     // add content
     moveBtn.textContent = query.moveBtn_content
-    var answer_element_list = []
-    var input_element_list = []
     Array.from(query.question_list).forEach(function(question){
         // create element
         var question_box = document.createElement('div')
@@ -85,6 +85,7 @@ function choice_question(query){
         // add answer item
         var count = 0
         var rightElement
+        var question_seed = random_seed()
         Array.from(question.answer_list).forEach(function(answer){
             // create element
             var answer_item_element = document.createElement('li')
@@ -96,14 +97,14 @@ function choice_question(query){
             // add class
             answer_item_element.classList.add(query.answer_box)
             input_element.type = 'radio'
-            input_element.name = question.index
+            input_element.name = question_seed
             input_element.id = seed
             label_element.setAttribute('for', seed)
             answer_index.classList.add(query.answer_index_css)
             answer_content.classList.add(query.answer_content_css)
             // add content
             answer_index.textContent = String.fromCharCode(65 + count ++ ) + '. '
-            answer_content.textContent = answer
+            answer_content.innerHTML = answer
             // add element
             answer_item_element.appendChild(input_element)
             label_element.appendChild(answer_index)
@@ -131,7 +132,6 @@ function choice_question(query){
             element : answer_list_element,
             right : rightElement,
             required : required_mess_element,
-            explain : question.explain || 'Tạm thời chưa có lời giải',
             index : question.index,
             note : note_element
         })
@@ -139,6 +139,13 @@ function choice_question(query){
         question_element.appendChild(required_mess_element)
         question_element.appendChild(note_element)
     })
+}
+function checkAnswer(query){
+    function find_element_choosed(node){
+        return node.querySelector('input:checked')
+    }
+    var submitBtn = document.querySelector(query.submit_selector)
+    var right_ans_count_element = document.querySelector(query.rightCount)
     // submit answer
     var isFirst = true
     submitBtn.addEventListener('click', function(e){
@@ -179,31 +186,20 @@ function choice_question(query){
                 }
             })
             // right wrong handler
-            var rightCountMess = rightAnswerList.join(', ') || 'Không có câu nào đúng'
-            var wrongCountMess = wrongAnswerList.join(', ') || "Không có câu nào sai"
-            var point = right_answers*query.max_point/(query.question_list.length)
+            var point = right_answers*max_point/(question_quantity)
             // show point
             var right_count = document.createElement('p')
-            var wrongAnswerElement = document.createElement('p')
-            var rightAnswerElement = document.createElement('p')
             var pointELement = document.createElement('p')
-            // add class 
-            rightAnswerElement.classList.add(query.right_css)
-            wrongAnswerElement.classList.add(query.wrong_css)
             // add textContent
-            rightAnswerElement.textContent = `Các câu bạn đã làm đúng: ${rightCountMess}`
-            wrongAnswerElement.textContent = `Các câu bạn đã làm sai: ${wrongCountMess}`
-            right_count.textContent = `Bạn đã làm đúng ${right_answers}/${query.question_list.length} câu`
-            pointELement.textContent = `Số điểm bạn đạt được: ${point.toFixed(2)}/${query.max_point} Điểm`
-            // add element to right_ans_count_element
-            right_ans_count_element.appendChild(rightAnswerElement)
-            right_ans_count_element.appendChild(wrongAnswerElement)
+            right_count.textContent = `Bạn đã làm đúng ${right_answers}/${question_quantity} câu`
+            pointELement.textContent = `Số điểm bạn đạt được: ${point.toFixed(2)}/${max_point} Điểm`
             right_ans_count_element.appendChild(pointELement)
             right_ans_count_element.appendChild(right_count)
             // disable inputs
             input_element_list.forEach(function(input_element){
                 input_element.setAttribute('disabled', true)
             })
+            submitBtn.style.display = 'none'
         }
     })
 }

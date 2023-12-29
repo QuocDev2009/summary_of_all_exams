@@ -102,6 +102,12 @@
     <script src="../assets/script/modal.js"></script>
     <script src="../assets/script/choice.js"></script>
     <script>
+        checkAnswer({
+            submit_selector : '.content__submit',
+            rightCount : '.content__point',
+            success_css : 'content__answer--success',
+            error_css : 'content__answer--error',
+        })
         choice_question({
             form: '.content__list .wrapper',
             answer_sheet__heading : [

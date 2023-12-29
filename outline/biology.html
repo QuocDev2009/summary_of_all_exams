@@ -141,6 +141,12 @@
         showImg('.content__img', '.modal.modal-img','.modal__img', '.modal-img .modal__closeBtn', '.modal-img .modal__download')
     </script>
     <script>
+        checkAnswer({
+            submit_selector : '.content__submit',
+            rightCount : '.content__point',
+            success_css : 'content__answer--success',
+            error_css : 'content__answer--error',
+        })
         choice_question({
             form: '.content__list .wrapper',
             answer_sheet__heading : [

@@ -27,6 +27,9 @@
     align-items: center;
     font-size: 18px;
 }
+.content__list .wrapper{
+    min-width: 300px;
+}
 .content__items{
     margin-bottom: 20px;
     max-width: calc(100% - 32px);
